@@ -1,0 +1,4 @@
+baseURL: "https://taogenna.github.io/kenyi-blog/"
+languageCode: en-us
+title: My New Hugo Site
+theme: PaperMod

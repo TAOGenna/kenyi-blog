@@ -1,4 +1,7 @@
 baseURL: "https://taogenna.github.io/kenyi-blog/"
+#baseURL: "http://localhost:1313"
 languageCode: en-us
 title: My New Hugo Site
 theme: PaperMod
+params:
+  math: true

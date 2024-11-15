@@ -10,7 +10,7 @@ params:
   homeInfoParams:
     Title: "Welcome to Kenyi'Log"
     Content: >
-      👋 Hi, this is Kenyi. I'm documenting my learning notes in this blogs. I was trained as a physicist, but also used to participate in programming competition. Somehow ended up interested in ML and AI so now I am working towards that.
+      👋 Hi, this is Kenyi. I'm documenting my learning notes in this blog. I was trained as a physicist, but also used to participate in programming competition. Somehow ended up interested in ML and AI so now I am working towards that.
 
   socialIcons:
     - name: Github

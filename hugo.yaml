@@ -3,6 +3,7 @@ baseURL: "https://taogenna.github.io/kenyi-blog/"
 languageCode: en-us
 title: Kenyi'Log
 theme: PaperMod
+
 params:
   math: true
 
@@ -10,7 +11,7 @@ params:
   homeInfoParams:
     Title: "Welcome to Kenyi'Log"
     Content: >
-      👋 Hi, this is Kenyi. I'm documenting my learning notes in this blog. I was trained as a physicist, but also used to participate in programming competition. Somehow ended up interested in ML and AI so now I am working towards that.
+      👋 Hi, this is Kenyi. I'm documenting my learning notes in this blog. I was trained as a physicist, but also used to participate in programming competitions. Somehow ended up interested in ML and AI, so now I am working towards that.
 
   socialIcons:
     - name: Github
@@ -25,10 +26,14 @@ params:
 
 menu:
   main:
-    # - identifier: categories
-    #   name: Categories
-    #   url: /categories/
-    #   weight: 10
+    - identifier: posts
+      name: Posts
+      url: /
+      weight: 5
+    - identifier: categories
+      name: Categories
+      url: /categories/
+      weight: 30
     - identifier: archives
       name: Archives
       url: /archives/

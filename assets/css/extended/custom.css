@@ -858,6 +858,26 @@ figcaption a {
     font-weight: 400
 }
 
+figure.align-center {
+    text-align: center;
+}
+
+figure.align-center img {
+    display: block;
+    margin: 0 auto;
+}
+
+figure.align-center figcaption {
+    margin: 0 auto;
+    width: 70%;
+    /* Ensures the caption doesn’t stretch unnecessarily */
+    font-size: 14px;
+    /* Adjust as needed */
+    color: var(--secondary);
+    line-height: 1.4;
+    /* Adjust spacing */
+}
+
 .toc {
     margin: 0 2px 40px;
     border: 1px solid var(--border);
@@ -1256,7 +1276,3 @@ h6:hover .anchor {
         transform: none
     }
 }
-
-/* .main {
-    max-width: calc(var(--main-width) + var(--gap) * 5);
-} */

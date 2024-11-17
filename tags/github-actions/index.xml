@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Github Actions on Kenyi&#39;Log</title>
+    <link>https://taogenna.github.io/kenyi-blog/tags/github-actions/</link>
+    <description>Recent content in Github Actions on Kenyi&#39;Log</description>
+    <generator>Hugo -- 0.125.7</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 16 Nov 2024 07:54:35 -0500</lastBuildDate>
+    <atom:link href="https://taogenna.github.io/kenyi-blog/tags/github-actions/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test</title>
+      <link>https://taogenna.github.io/kenyi-blog/docs/post1/post1/</link>
+      <pubDate>Sat, 16 Nov 2024 07:54:35 -0500</pubDate>
+      <guid>https://taogenna.github.io/kenyi-blog/docs/post1/post1/</guid>
+      <description>some code inline code Here is some inline code that you can use in a paragraph.
+some other inline &amp;lt; figure src=&amp;quot;../image1.jpg&amp;quot; alt=&amp;quot;Description of the image&amp;quot; caption=&amp;quot;Your caption text here&amp;quot; class=&amp;quot;align-center&amp;quot; &amp;gt; code.
+bloc code def something(): return tmr this is a equation testing inline equations $a-3$ | wave equations $i\hbar \frac{\partial}{\partial t} \Psi = \hat{H}\Psi$, now math block:
+$$ i\hbar \frac{\partial}{\partial t} \Psi = \hat{H}\Psi $$
+testing max lenght: this is some randon words randon words randon words randon words randon words randon words randon wordsrandon wordsrandon wordsrandon words randon words this is a block equations</description>
+    </item>
+  </channel>
+</rss>

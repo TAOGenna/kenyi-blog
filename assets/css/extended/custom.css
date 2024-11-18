@@ -1276,3 +1276,17 @@ h6:hover .anchor {
         transform: none
     }
 }
+
+
+.custom-image-size img {
+    width: 50%;
+    /* Adjust this percentage to the desired size */
+    height: auto;
+    /* Keeps the aspect ratio */
+    max-width: 100%;
+    /* Ensures the image does not exceed its container */
+    margin: 0 auto;
+    /* Centers the image */
+    display: block;
+    /* Ensures proper centering */
+}

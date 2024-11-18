@@ -65,6 +65,19 @@ what worked at the end: do not forget to enclose this code with `{{}}`
 
 {{< figure src="../image1.jpg" alt="Description of the image" caption="You Your bold and larger caption text here Your bold and larger caption text here Your bold and larger caption text here Your bold and larger caption text here Your bold and larger caption text here Your bold and larger caption textr caption text here" class="align-center" >}}
 
+## include soundcloud
+
+how to do it?
+- go to the song
+- push the `share` buttom
+- choose `embed` option
+
+<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1876617552&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+<div style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif; font-weight: 100;">
+  <a href="https://soundcloud.com/alanwalker" title="Alan Walker" target="_blank" style="color: #cccccc; text-decoration: none;">Alan Walker</a> · 
+  <a href="https://soundcloud.com/alanwalker/alan-walker-barcelona-carstn-remix" title="Alan Walker - Barcelona (CARSTN Remix)" target="_blank" style="color: #cccccc; text-decoration: none;">Alan Walker - Barcelona (CARSTN Remix)</a>
+</div>
+
 ## template citation 
 
 # Citation

@@ -2,13 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/categories/ai/</loc>
-    <lastmod>2024-11-16T07:54:35-05:00</lastmod>
+    <loc>http://localhost:1313/categories/art/</loc>
+    <lastmod>2024-11-17T23:49:06-05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2024-11-16T07:54:35-05:00</lastmod>
+    <lastmod>2024-11-17T23:49:06-05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/docs/</loc>
+    <lastmod>2024-11-17T23:49:06-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2024-11-17T23:49:06-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/docs/post2/relearning-guitar/</loc>
+    <lastmod>2024-11-17T23:49:06-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/ai/</loc>
     <lastmod>2024-11-16T07:54:35-05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/github-actions/</loc>
@@ -20,13 +29,7 @@
     <loc>http://localhost:1313/tags/hugo/</loc>
     <lastmod>2024-11-16T07:54:35-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2024-11-16T07:54:35-05:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/categories/math/</loc>
-    <lastmod>2024-11-16T07:54:35-05:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/music/</loc>
     <lastmod>2024-11-16T07:54:35-05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/programming/</loc>

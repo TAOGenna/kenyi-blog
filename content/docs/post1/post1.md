@@ -3,7 +3,7 @@ title = 'Test'
 date = 2024-11-16T07:54:35-05:00
 draft = false
 tags = ["hugo", "github actions", "github pages"]
-categories = ["math","programming","music","AI"]
+categories = ["math","programming","art","AI"]
 +++
 
 # some code 

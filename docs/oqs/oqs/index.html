@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>How to measure the non-Markovianity of a Quantum System? | Kenyi&#39;Log</title>
+<meta name="keywords" content="">
+<meta name="description" content="Final term paper for the course of Open Quantum Systems. Introduction Master equations govern the time evolution of a quantum system interacting with an environment and can be written in a variety of forms. Time-independent or memoryless master equations can be expressed in the well-known Lindblad form. In fact, any master equation local in time, Markovian or non-Markovian, can also be written in a Lindblad-like form. A diagonalization procedure results in a unique, canonical representation of the equation, which can be used to fully characterize the non-Markovianity of the time evolution.">
+<meta name="author" content="Kenyi Takagui-Perez">
+<link rel="canonical" href="https://taogenna.github.io/kenyi-blog/docs/oqs/oqs/">
+<link crossorigin="anonymous" href="/kenyi-blog/assets/css/stylesheet.9311a7c12c5ee72690dd93422f72316b17d2fe3894c143dc6ff319cf983b4451.css" integrity="sha256-kxGnwSxe5yaQ3ZNCL3IxaxfS/jiUwUPcb/MZz5g7RFE=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://taogenna.github.io/kenyi-blog/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://taogenna.github.io/kenyi-blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://taogenna.github.io/kenyi-blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://taogenna.github.io/kenyi-blog/apple-touch-icon.png">
+<link rel="mask-icon" href="https://taogenna.github.io/kenyi-blog/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://taogenna.github.io/kenyi-blog/docs/oqs/oqs/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+    integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous">
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"
+    integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY"
+    crossorigin="anonymous"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"
+    integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
+>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false }
+            ]
+        });
+    });
+</script>
+
+  
+
+<meta property="og:url" content="https://taogenna.github.io/kenyi-blog/docs/oqs/oqs/">
+  <meta property="og:site_name" content="Kenyi&#39;Log">
+  <meta property="og:title" content="How to measure the non-Markovianity of a Quantum System?">
+  <meta property="og:description" content="Final term paper for the course of Open Quantum Systems. Introduction Master equations govern the time evolution of a quantum system interacting with an environment and can be written in a variety of forms. Time-independent or memoryless master equations can be expressed in the well-known Lindblad form. In fact, any master equation local in time, Markovian or non-Markovian, can also be written in a Lindblad-like form. A diagonalization procedure results in a unique, canonical representation of the equation, which can be used to fully characterize the non-Markovianity of the time evolution.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+    <meta property="article:published_time" content="2023-07-26T08:11:59-05:00">
+    <meta property="article:modified_time" content="2023-07-26T08:11:59-05:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How to measure the non-Markovianity of a Quantum System?">
+<meta name="twitter:description" content="Final term paper for the course of Open Quantum Systems. Introduction Master equations govern the time evolution of a quantum system interacting with an environment and can be written in a variety of forms. Time-independent or memoryless master equations can be expressed in the well-known Lindblad form. In fact, any master equation local in time, Markovian or non-Markovian, can also be written in a Lindblad-like form. A diagonalization procedure results in a unique, canonical representation of the equation, which can be used to fully characterize the non-Markovianity of the time evolution.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Docs",
+      "item": "https://taogenna.github.io/kenyi-blog/docs/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "How to measure the non-Markovianity of a Quantum System?",
+      "item": "https://taogenna.github.io/kenyi-blog/docs/oqs/oqs/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to measure the non-Markovianity of a Quantum System?",
+  "name": "How to measure the non-Markovianity of a Quantum System?",
+  "description": "Final term paper for the course of Open Quantum Systems. Introduction Master equations govern the time evolution of a quantum system interacting with an environment and can be written in a variety of forms. Time-independent or memoryless master equations can be expressed in the well-known Lindblad form. In fact, any master equation local in time, Markovian or non-Markovian, can also be written in a Lindblad-like form. A diagonalization procedure results in a unique, canonical representation of the equation, which can be used to fully characterize the non-Markovianity of the time evolution.",
+  "keywords": [
+    
+  ],
+  "articleBody": " Final term paper for the course of Open Quantum Systems. Introduction Master equations govern the time evolution of a quantum system interacting with an environment and can be written in a variety of forms. Time-independent or memoryless master equations can be expressed in the well-known Lindblad form. In fact, any master equation local in time, Markovian or non-Markovian, can also be written in a Lindblad-like form. A diagonalization procedure results in a unique, canonical representation of the equation, which can be used to fully characterize the non-Markovianity of the time evolution. Several different measures of non-Markovianity have recently been presented that reflect, to different degrees, the appearance of negative decoherence rates in the Lindblad-like form of the master equation. We therefore propose to use the negative decoherence rates themselves as they appear in the canonical form of the master equation to fully characterize non-Markovianity.\nCharacterizing the non-Markovianity To be more precise we say that the canonical form is to bring the master equation to a local form such that the coherence rate is uniquely defined. Let us look at the method used in the paper. Recall the master equation in local time\n$$ \\begin{align*} \\dot{\\rho}(t) \u0026= \\int_0^t ds (K_{s,t} \\circ \\phi_s)[\\rho(0)] \\\\ \u0026= \\int_0^t ds (K_{s,t} \\circ \\phi_s \\circ \\phi^{-1}_t) \\phi_t[\\rho(0)] \\\\ \u0026= \\Lambda_t[\\rho(t)] \\end{align*} $$ We can write this as $$ \\dot{\\rho}=\\Lambda_t[\\rho]=\\sum_kA_k(t)\\rho B^\\dagger_k(t) $$ We say that we have $N$ operators $ \\{G_m | m=0,1,2,…,N-1\\} $ such that they have the following properties: $\\big\\{G_0=\\frac{\\hat{1}}{\\sqrt{d}},\\quad G_m=G_m^\\dagger,\\quad Tr[G_mG_n]=\\delta_{mn}\\big\\}$ With this new operator base we can expand $A_k$ and $B_k$ such that $ A_k=\\sum_i G_ia_{ik};\\quad B_k=\\sum_j G_jb_{jk}$ We replace that in the master equation $$ \\dot\\rho=\\sum_k\\sum{ij}a_{ik}b_{jk}^*G_i\\rho G_j=\\sum_{ij}c_{ij}G_i\\rho G_j $$ We use the property $G_m=G^\\dagger_m$, and that $\\rho$ and $\\dot\\rho$ are Hermitian $ \\sum_{ij}c_{ij}G_i\\rho G_j=\\sum_{ij}c_{ij}^*G_j\\rho G_i=\\sum_{ij}c_{ij}^*G_i\\rho G_j$. We separate the terms with index $0$\n$$ \\dot\\rho=\\sum_{ij}c_{ij}^*G_i\\rho G_j=c_{00}G_0\\rho G_0+\\sum_ic_{0i}^*G_i\\rho G_0+\\sum_j c_{j0}^*G_0\\rho G_j+\\sum_{i\\neq j}C_{ji}^*G_i\\rho G_j $$\nWe use the base definition of $G_0=\\frac{\\hat{1}}{\\sqrt{d}}$:\n\\[ \\dot\\rho=\\sum_{ij}c_{ij}^*G_i\\rho G_j=c_{00}\\frac{\\rho}{d}+\\sum_i c_{0i}^*G_i\\frac{\\rho}{\\sqrt{d}}+\\sum_j c_{j0}^{*}\\frac{\\rho}{\\sqrt{d}} G_j+\\sum_{i\\neq j}C_{ji}^*G_i\\rho G_j \\] Identifying $C=\\frac{1}{2}\\frac{c_{00}}{d}+\\sum_i \\frac{c_{i0}}{\\sqrt{d}}G_i$ we get:\n$$ \\dot\\rho=C\\rho+\\rho C^\\dagger+\\sum_{i\\neq j}C_{ji}^*G_i\\rho G_j $$\nIf we apply the trace and its cyclic property to rearrange the position of $rho$ and taking into account that $Tr[\\dot\\rho]$ such that we obtain: $C+C^\\dagger=-\\sum_{i,j=1}^{N-1}d_{ij}G_jG_i$. We identify $H=\\frac{1}{2}i\\hbar (C-C^\\dagger)$ then we can write $$ \\dot\\rho=-\\frac{i}{\\hbar}[H,\\rho]+\\sum_{i,j=1}^{N-1}d_{ij}(t)\\Big(G_i\\rho G_j-\\frac{1}{2}{G_jG_i,\\rho}\\Big) $$ The inconsistency matrix $\\textbf{d}$ is independent of time. Due to the above construction we say that the matrix elements have the following expression $$ d_{ij}=\\sum_kTr[G_iA_k]Tr[G_jB_k\\dagger] $$ This can also be written in its diagonal form since it is Hermitian. $$ d_{ij}=\\sum_kU_{ik}\\gamma_kU_{jk}^* $$ where the eigenvalues ​​$\\gamma_k$ of $\\textbf{d}$ are real, but not necessarily positive at all times, and the $U_{ik}$ are unitary matrices made of the same eigenvectors of $\\textbf{d}$, with $\\sum_kU_{ik}U_{jk}^*=\\delta_{ij}$. Now to recover the expression of the master equation we use the properties of the basis ${G_m}$ and define $L_k(t)=\\sum_{i=1}^{N-1}U_{ik}(t)G_i$, then, recovering the time dependence, we get\n$$ \\dot\\rho=-\\frac{i}{\\hbar}[H(t),\\rho]+\\sum_{k=1}^{d^2-1}\\gamma_k(t)\\Big[L_k(t)\\rho L_k^\\dagger(t)-\\frac{1}{2}\\big\\{L_k^\\dagger(t)L_k(t),\\rho \\big\\}\\Big] $$\nIt can be noted that the equation is similar to the Lindblad equation for a memoryless master equation. However, we list some differences:\nLa dependencia de tiempo de la tasa de decoherencia y los operadores $L_k$ Las tasas de decoherencia están únicamente determinadas Las tasa de decoherencia puede ser negativa, correspondiendo a interacciones entre el ambiente y el sistema de tal manera que el sistema podría “recobrar coherencia”, es decir, revertir el proceso de decaimientos más tempranos If the canonical decoherence rates are positive at all times, then the evolution over any time interval is completely positive. Moreover, for finite systems, having positive decoherence rates at all times is equivalent to divisibility of the evolution to a sequence of infinitesimally positive evolutions.\nNon-Markovian processes: We now state the following definition of non-Markovianity: a local master equation is Markovian at a given time if and only if the canonical decoherence rates are positive. Likewise, the evolution is non-Markovian if one or more of the decoherence rates are strictly negative. We give two examples where it can be more easily seen what we mean. Let us say that we have the following law of evolution\n\\[ \\begin{align*} \\dot\\rho\u0026=[2\\gamma(t)+\\tilde\\gamma(t)][2\\sigma_x\\rho\\sigma_x+2\\sigma_y\\rho\\sigma_y-4\\rho]\\\\ \u0026-\\gamma(t)[2\\sigma_-\\rho\\sigma_+-\\sigma_+\\sigma_-\\rho-\\rho\\sigma_+\\sigma_-]\\\\ \u0026-\\gamma(t)[2\\sigma_+\\rho\\sigma_--\\sigma_-\\sigma_+\\rho-\\rho\\sigma_-\\sigma_+] \\end{align*} \\] For this to be a non-Markov evolution it would seem that there are two ways, $\\gamma(t)\u003e0$ or that $2\\gamma(t)+\\tilde\\gamma(t)\u003c0$. However, when taken to its canonical form the equation can be rewritten as $$ \\dot\\rho=[\\gamma(t)+\\tilde\\gamma(t)][2\\sigma_x\\rho\\sigma_x+2\\sigma_y\\rho\\sigma_y-4\\rho] $$ and we see that in reality only with one condition could it be non-Markovian, that being $\\gamma(t)+\\tilde\\gamma(t)\u003c0$. Another case in which one can see the need to take things to their canonical form is considering the following master equation $$ \\dot\\rho=L\\rho L^\\dagger-\\frac{1}{2}(L^\\dagger L\\rho+\\rho L\\dagger L)-[L^\\dagger\\rho L-\\frac{1}{2}(LL^\\dagger\\rho+\\rho L L^\\dagger)] $$ where at first glance it seems to generate a non-Markov evolution. However, if we choose $L=(1+iH/\\hbar)/\\sqrt{2}$ we end up with a master equation of the form $$ \\dot\\rho=-\\frac{i}{\\hbar}[H,\\rho] $$ which corresponds to a Markovian evolution. \\par We now move on to mention some measures of non-Markovianity based on the sign accompanying the decoherence rate at some given time. To describe non-Markovianity in an individual channel we use $$ f_k(t):=max[0,-\\gamma(t)]\\geq 0. $$ Or for a time $t$ without considering individual channels $$ f(t)=\\sum_{k=1}^{d^2-1}f_k(t)=\\frac{1}{2}\\sum_{k=1}^{d^2-1}\\big[|\\gamma_k(t)|-\\gamma_k(t)\\big] $$ , if we extend this expression but for a time range we would have the expression\n$$ F_k(t,t’)=\\int_t^{t’}ds f_k(s) $$\nwhich characterizes \\emph{the total amount of non-Markovianness on channel $k$ over time step $[t,t’]$}. We can also define a discrete measure as the number of strictly negative decoherence rates\n$$ n(t):= \\# \\{ k: \\gamma_k (t) \u003c 0 \\} = \\# \\{ k:f_k(t) \u003e0 \\} $$\nwe call it the non-Markov index. To exemplify the use of these measures we take the case of a single decoherence channel. We consider the following master equation $\\dot\\rho=-\\frac{i}{\\hbar}[K(t),\\rho]+\\alpha(t)[A(t)\\rho A(t)^\\dagger-\\frac{1}{2}{A(t)^\\dagger A(t),\\rho}]$. Its canonical form will be $$ \\dot\\rho=-\\frac{i}{\\hbar}[H(t),\\rho]+\\gamma(t)[L(t)\\rho L(t)^\\dagger-\\frac{1}{2}{L(t)^\\dagger L(t),\\rho}] $$ By the definition of non-Markovianity, the evolution of the system is non-Markovian, at time $t$ if and only if $\\gamma(t)\u003c0$. The total amount of non-Markovianity would be calculated as $$ F(t,t’)=-\\int_{\\gamma(t)\u003c0}ds\\gamma(s) $$ Furthermore, the discrete non-Markov index would be unity when $\\gamma(t)\u003c0$ or zero otherwise.\nDistance measures: A measure for the non-Markovianity of quantum dynamics of open systems is constructed based on the trace distance of two quantum states which describes the probability of successfully distinguishing these states. The basic idea underlying this construction is that Markovian processes tend to continuously reduce the distinguishability between any two states, while the essential property of non-Markovian behavior is the growth of this distinguishability. The loss of distinguishability of states is interpreted as an information flow from the open system to its environment.\\ To construct the measure for non-Markovianity we need a measure for the distance between two quantum states $\\rho_1$ and $\\rho_2$. Such a measure is given by the trace distance which is defined as $$ D(\\rho_1,\\rho_2)=\\frac{1}{2}Tr|\\rho_1-\\rho_2| $$ where $|A|=\\sqrt{A^\\dagger A}$. A property that we should note is that all trace-preserving and completely positive maps $\\Phi$ are contractions for this metric. $$ D(\\Phi_{\\rho_1},\\Phi_{\\rho_2})\\leq D(\\rho_1,\\rho_2) $$ This means that no trace-preserving quantum operation can ever increase the distinguishability of two states. \\par Suppose we have a quantum process given by a Markovian master equation, $$ \\frac{d}{dt}\\rho(t)=\\mathcal{L}\\rho(t), $$ with $\\mathcal{L}\\rho=-i[H,\\rho]+\\sum_i\\gamma_i\\Big[A_i\\rho A_i\\dagger-\\frac{1}{2}{A_i\\dagger A_i,\\rho}\\Big]$ involving positive relaxation rates $\\gamma_i\\geq 0$. Such a master equation leads to dynamical maps $\\Phi(t)=exp(\\mathcal{L}t)$, $t\\geq0$, which describes the dynamics of the density matrix through the relation $\\rho(t)=\\Phi(\\tau)\\rho(0)$. It can be shown that $$ D(\\rho_1(\\tau+t),\\rho_2(\\tau+t))\\leq D(\\rho_1(t),\\rho_2(t)) $$ where $\\rho_{1,2}(t)=\\Phi(t)\\rho_{1,2}(0)$. Hence, the trace distance of states $\\rho_{1,2}(t)$, with any initial state $\\rho_{1,2}(0)$, is a monotonically decreasing function of time. The interpretation of this is that this is a feature of quantum Markovian processes, implying that under Markovian evolution any two states generally become less and less distinguishable as time increases. Furthermore, it can be proven that the inequality given above holds for every time-dependent Markovian process defined by the master equation with $\\gamma_i(t)\\geq 0$. \\par We define the rate of change of the trace distance with $$ \\sigma(t,\\rho_{1,2}(0)) = \\frac{d}{dt}D(\\rho_1(t),\\rho_2(t)). $$ There are many processes for which $\\sigma$ is greater than zero for certain times. It is such processes that we define as \\emph{non-Markovian}. We then complement the definition given above for non-Markov processes by now saying that a process is non-Markovian if there exists a pair of initial states $\\rho_{1,2}(0)$ and a certain time $t$ such that $\\sigma(t,\\rho_{1,2}(0))\u003e0$.\nWe take the case for one qubit to exemplify this case. Given a single-qubit density matrix $\\rho$, since Pauli matrices form a basis for $2\\times2$ complex matrices, the Bloch sphere representation can be given as: $$\\rho = I + \\vec{r} \\cdot \\vec{\\sigma}$$\nwhere $\\vec{r} = (r_x, r_y, r_z)$ and $|\\vec{r}| \\leq 1$.\nThe expectation values ​​of the Pauli matrices $\\sigma_x$, $\\sigma_y$ and $\\sigma_z$ can be calculated from the density matrix $\\rho$ as follows:\n$$r_x = Tr(\\rho \\sigma_x);\\quad r_y = Tr(\\rho \\sigma_y); \\quad r_z = Tr(\\rho \\sigma_z)$$\nwhere $Tr$ denotes the trace operation. The trace distance between two qubits in the Bloch representation is equal to half the Euclidean distance between their Bloch vectors. For example, suppose we have two qubits with Bloch vectors $\\vec{r_1}$ and $\\vec{r_2}$. The Euclidean distance between these vectors is given by:\n$$d(\\vec{r_1}, \\vec{r_2}) = \\sqrt{(r_{1x} - r_{2x})^2 + (r_{1y} - r_{2y})^2 + (r_{1z} - r_{2z})^2}$$\nThe trace distance between these qubits is then: $D(\\rho_1, \\rho_2) = \\frac{1}{2} d(\\vec{r_1}, \\vec{r_2})$. The master equation for a qubit in the Bloch representation is given by: $$\\frac{d}{dt} \\rho = -i [\\mathcal{H}, \\rho] + \\mathcal{L}(\\rho)$$ where $\\rho$ is the density matrix of the qubit, $\\mathcal{H}$ is the Hamiltonian of the system, and $\\mathcal{L}(\\rho)$ is the Lindblad superoperator describing the dissipative dynamics of the system.\nThe Bloch vector is a representation of a qubit state that is commonly used in quantum mechanics. The Bloch vector is related to the density matrix of a qubit state by:\n$$\\vec{r} = \\text{Tr}(\\rho \\vec{\\sigma})$$\nwhere $\\rho$ is the density matrix of the qubit state and $\\vec{\\sigma}$ is a vector containing the three Pauli matrices. The master equation for a qubit in the Bloch representation can be derived from the master equation for a qubit in the density matrix representation using the relationship between the Bloch vector and the density matrix.\n$$\\rho = \\frac{1}{2}(I + \\vec{r} \\cdot \\vec{\\sigma})$$ The master equation for a qubit in the Bloch representation can be written as:\n$$\\frac{d}{dt} \\vec{r} = \\vec{u} + D \\vec{r}$$\nwhere $\\vec{r}$ is the Bloch vector of the qubit state, $\\vec{u}$ is the drift vector, and $D$ is the damping matrix. The drift vector $\\vec{u}$ and the damping matrix $D$ depend on the specific physical system under consideration. In general, the drift vector $\\vec{u}$ describes the coherent evolution of the qubit state, while the damping matrix $D$ describes the incoherent evolution of the qubit state due to ambient noise. The drift vector $u_j$ is defined as $(1/2)Tr[\\sigma_j\\Lambda(1)]$ and the damping matrix $D_{jk}$ is defined as $(1/2)Tr[\\sigma_j\\Lambda(\\sigma_k)]$ . The Bloch equation can be written as $\\dot v = u+Dv$ where v is the Bloch vector.\n$$ u_j = \\frac{1}{2}tr[\\sigma_j\\Lambda(1)];\\quad D_{jk} = \\frac{1}{2}tr[\\sigma_j\\Lambda(\\sigma_k)];\\quad \\frac{dv}{dt} = u + Dv $$\nThe trace distance of any two density operators, $\\rho$ and $\\rho+\\delta\\rho$, is $$ (\\delta s_{Tr})^2:=\\frac{1}{4}(Tr|\\delta\\rho|)^2=\\frac{1}{4}\\delta \\textbf{x}.\\delta \\textbf{x} $$ We want to see what happens when two density matrices differ by a $\\delta\\rho$ so considering the master equation in the Bloch representation for a Bloch vector we get that $\\delta \\dot x=D\\delta x$, and therefore\n$$ \\frac{d}{dt}((\\delta s_{Tr})^2 )=\\frac{1}{4}[\\delta\\dot x.\\delta x+\\delta x.\\delta\\dot x]=\\frac{1}{4}\\delta x^{T}(D+D{T})\\delta x $$ From that equation we see that the trace between a pair of density operators increases if and only if it can increase between a pair of infinitesimally separated states. But, the equation also tells us that it can increase if and only if the matrix $D+D^T$ has positive eigenvalues. That is, \\emph{The trace distance of the qubit can precensus non-Markovianity at time $t$ if and only if the damping matrix satisfies the condition} $$ \\lambda_{\\text{max}}[D(t)+D^T(t)]\u003e0 $$ where $\\lambda_{\\text{max}}(A)$ denotes the maximum eigenvalue of $A$.\nConclusion The canonical form of the master equation gives us the mathematical form necessary to be able to evaluate the non-Markovianity of a given system. Such a canonical form leaves us with uniquely determined decoherence rates. We arrive at a positive (negative) canonical decoherence rate corresponding to a Markovian (non-Markovian) evolution. This led us to define the non-Markovianity measure called trace distance which tells us what kind of evolution is going on based on the rate of change of the trace distance. Also, for each of these steps to characterize the non-Markovianity of the system we saw some examples. First, how bringing the system to its canonical form was crucial for the characterization. Second, the case of a single-channel system as a test. Finally, third, we dealt with the case of the one-qubit master equation in its Bloch representation. The above results demonstrate the value of digging deeper into aspects of the non-Markovian evolution characterization. Finally, it would also be interesting to explore the experimental aspects related to the concepts touched on in the text.\nReferences [1] G. Lindblad, Comm. Math. Phys. 48, 119 (1976)\n[2] M.J.W. Hall, J.D. Cresser, L. Li and E. Andersson, “Canonical form of master equations and characterization of non-Markovianity,” Phys. Rev. A 89, 042120 (2014).\n[3] H.-P. Breuer, E.-M. Laine, and J. Piilo, “Measure for the Degree of Non-Markovian Behavior of Quantum Processes in Open Systems,” Phys. Rev. Lett. 103, 210401 (2009)\nCitation Cited as:\nTakagui-Perez, R. Kenyi. How to measure the non-Markovianity of a Quantum System? Kenyi’Log.\nhttps://taogenna.github.io/kenyi-blog/docs/oqs/oqs/\nOr\n@article{something, title = \"How to measure the non-Markovianity of a Quantum System?\", author = \"Takagui-Perez, R. Kenyi\", journal = \"https://taogenna.github.io/kenyi-blog/\", year = \"2024\", month = \"Dec\", url = \"https://taogenna.github.io/kenyi-blog/docs/oqs/oqs/\" } ",
+  "wordCount" : "2253",
+  "inLanguage": "en",
+  "datePublished": "2023-07-26T08:11:59-05:00",
+  "dateModified": "2023-07-26T08:11:59-05:00",
+  "author":{
+    "@type": "Person",
+    "name": "Kenyi Takagui-Perez"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://taogenna.github.io/kenyi-blog/docs/oqs/oqs/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Kenyi'Log",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://taogenna.github.io/kenyi-blog/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://taogenna.github.io/kenyi-blog/" accesskey="h" title="Kenyi&#39;Log (Alt + H)">Kenyi&#39;Log</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://taogenna.github.io/kenyi-blog/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://taogenna.github.io/kenyi-blog/archives/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://taogenna.github.io/kenyi-blog/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://taogenna.github.io/kenyi-blog/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      How to measure the non-Markovianity of a Quantum System?
+    </h1>
+    <div class="post-meta"><span title='2023-07-26 08:11:59 -0500 -0500'>July 26, 2023</span>&nbsp;·&nbsp;11 min&nbsp;·&nbsp;Kenyi Takagui-Perez
+
+</div>
+  </header> 
+  <div class="post-content"><div style="text-align: center;">
+    Final term paper for the course of Open Quantum Systems.
+</div>
+<h1 id="introduction">Introduction<a hidden class="anchor" aria-hidden="true" href="#introduction">#</a></h1>
+<p>Master equations govern the time evolution of a quantum system interacting with an environment and can be written in a variety of forms. Time-independent or memoryless master equations can be expressed in the well-known Lindblad form. In fact, any master equation local in time, Markovian or non-Markovian, can also be written in a Lindblad-like form. A diagonalization procedure results in a unique, canonical representation of the equation, which can be used to fully characterize the non-Markovianity of the time evolution. Several different measures of non-Markovianity have recently been presented that reflect, to different degrees, the appearance of negative decoherence rates in the Lindblad-like form of the master equation. We therefore propose to use the negative decoherence rates themselves as they appear in the canonical form of the master equation to fully characterize non-Markovianity.</p>
+<h1 id="characterizing-the-non-markovianity">Characterizing the non-Markovianity<a hidden class="anchor" aria-hidden="true" href="#characterizing-the-non-markovianity">#</a></h1>
+<p>To be more precise we say that the canonical form is to bring the master equation to a local form such that the coherence rate is uniquely defined. Let us look at the method used in the paper. Recall the master equation in local time</p>
+
+$$
+\begin{align*}
+    \dot{\rho}(t) &= \int_0^t ds (K_{s,t} \circ \phi_s)[\rho(0)] \\
+    &= \int_0^t ds (K_{s,t} \circ \phi_s \circ \phi^{-1}_t) \phi_t[\rho(0)] \\
+    &= \Lambda_t[\rho(t)]
+\end{align*}
+$$
+
+<p>We can write this as
+$$
+\dot{\rho}=\Lambda_t[\rho]=\sum_kA_k(t)\rho B^\dagger_k(t)
+$$
+We say that we have $N$ operators $ \{G_m | m=0,1,2,&hellip;,N-1\} $ such that they have the following properties: $\big\{G_0=\frac{\hat{1}}{\sqrt{d}},\quad G_m=G_m^\dagger,\quad Tr[G_mG_n]=\delta_{mn}\big\}$
+With this new operator base we can expand $A_k$ and $B_k$ such that $
+A_k=\sum_i G_ia_{ik};\quad B_k=\sum_j G_jb_{jk}$
+We replace that in the master equation
+$$
+\dot\rho=\sum_k\sum{ij}a_{ik}b_{jk}^*G_i\rho G_j=\sum_{ij}c_{ij}G_i\rho G_j
+$$
+We use the property $G_m=G^\dagger_m$, and that $\rho$ and $\dot\rho$ are Hermitian $
+\sum_{ij}c_{ij}G_i\rho G_j=\sum_{ij}c_{ij}^*G_j\rho G_i=\sum_{ij}c_{ij}^*G_i\rho G_j$. We separate the terms with index $0$</p>
+<p>$$
+\dot\rho=\sum_{ij}c_{ij}^*G_i\rho G_j=c_{00}G_0\rho G_0+\sum_ic_{0i}^*G_i\rho G_0+\sum_j c_{j0}^*G_0\rho G_j+\sum_{i\neq j}C_{ji}^*G_i\rho G_j
+$$</p>
+<p>We use the base definition of $G_0=\frac{\hat{1}}{\sqrt{d}}$:</p>
+
+\[
+    \dot\rho=\sum_{ij}c_{ij}^*G_i\rho G_j=c_{00}\frac{\rho}{d}+\sum_i c_{0i}^*G_i\frac{\rho}{\sqrt{d}}+\sum_j c_{j0}^{*}\frac{\rho}{\sqrt{d}} G_j+\sum_{i\neq j}C_{ji}^*G_i\rho G_j
+\]
+
+<p>Identifying  $C=\frac{1}{2}\frac{c_{00}}{d}+\sum_i \frac{c_{i0}}{\sqrt{d}}G_i$ we get:</p>
+<p>$$
+\dot\rho=C\rho+\rho C^\dagger+\sum_{i\neq j}C_{ji}^*G_i\rho G_j
+$$</p>
+<p>If we apply the trace and its cyclic property to rearrange the position of $rho$ and taking into account that $Tr[\dot\rho]$ such that we obtain: $C+C^\dagger=-\sum_{i,j=1}^{N-1}d_{ij}G_jG_i$. We identify $H=\frac{1}{2}i\hbar (C-C^\dagger)$ then we can write
+$$
+\dot\rho=-\frac{i}{\hbar}[H,\rho]+\sum_{i,j=1}^{N-1}d_{ij}(t)\Big(G_i\rho G_j-\frac{1}{2}{G_jG_i,\rho}\Big)
+$$
+The inconsistency matrix $\textbf{d}$ is independent of time. Due to the above construction we say that the matrix elements have the following expression
+$$
+d_{ij}=\sum_kTr[G_iA_k]Tr[G_jB_k\dagger]
+$$
+This can also be written in its diagonal form since it is Hermitian.
+$$
+d_{ij}=\sum_kU_{ik}\gamma_kU_{jk}^*
+$$
+where the eigenvalues ​​$\gamma_k$ of $\textbf{d}$ are real, but not necessarily positive at all times, and the $U_{ik}$ are unitary matrices made of the same eigenvectors of $\textbf{d}$, with $\sum_kU_{ik}U_{jk}^*=\delta_{ij}$. Now to recover the expression of the master equation we use the properties of the basis ${G_m}$ and define $L_k(t)=\sum_{i=1}^{N-1}U_{ik}(t)G_i$, then, recovering the time dependence, we get</p>
+<p>$$
+\dot\rho=-\frac{i}{\hbar}[H(t),\rho]+\sum_{k=1}^{d^2-1}\gamma_k(t)\Big[L_k(t)\rho L_k^\dagger(t)-\frac{1}{2}\big\{L_k^\dagger(t)L_k(t),\rho \big\}\Big]
+$$</p>
+<p>It can be noted that the equation is similar to the Lindblad equation for a memoryless master equation. However, we list some differences:</p>
+<ul>
+<li>La dependencia de tiempo de la tasa de decoherencia y los operadores $L_k$</li>
+<li>Las tasas de decoherencia están únicamente determinadas</li>
+<li>Las tasa de decoherencia puede ser negativa, correspondiendo a interacciones entre el ambiente y el sistema de tal manera que el sistema podría &ldquo;recobrar coherencia&rdquo;, es decir, revertir el proceso de decaimientos más tempranos</li>
+</ul>
+<p>If the canonical decoherence rates are positive at all times, then the evolution over any time interval is completely positive. Moreover, for finite systems, having positive decoherence rates at all times is equivalent to divisibility of the evolution to a sequence of infinitesimally positive evolutions.</p>
+<p><strong>Non-Markovian processes:</strong> We now state the following definition of non-Markovianity: a local master equation is <em>Markovian</em> at a given time if and only if the canonical decoherence rates are positive. Likewise, the evolution is <em>non-Markovian</em> if one or more of the decoherence rates are strictly negative. We give two examples where it can be more easily seen what we mean. Let us say that we have the following law of evolution</p>
+
+\[
+\begin{align*}
+        \dot\rho&=[2\gamma(t)+\tilde\gamma(t)][2\sigma_x\rho\sigma_x+2\sigma_y\rho\sigma_y-4\rho]\\
+        &-\gamma(t)[2\sigma_-\rho\sigma_+-\sigma_+\sigma_-\rho-\rho\sigma_+\sigma_-]\\
+        &-\gamma(t)[2\sigma_+\rho\sigma_--\sigma_-\sigma_+\rho-\rho\sigma_-\sigma_+]
+\end{align*}
+\]
+
+<p>For this to be a non-Markov evolution it would seem that there are two ways, $\gamma(t)&gt;0$ or that $2\gamma(t)+\tilde\gamma(t)&lt;0$. However, when taken to its canonical form the equation can be rewritten as
+$$
+\dot\rho=[\gamma(t)+\tilde\gamma(t)][2\sigma_x\rho\sigma_x+2\sigma_y\rho\sigma_y-4\rho]
+$$
+and we see that in reality only with one condition could it be non-Markovian, that being $\gamma(t)+\tilde\gamma(t)&lt;0$. Another case in which one can see the need to take things to their canonical form is considering the following master equation
+$$
+\dot\rho=L\rho L^\dagger-\frac{1}{2}(L^\dagger L\rho+\rho L\dagger L)-[L^\dagger\rho L-\frac{1}{2}(LL^\dagger\rho+\rho L L^\dagger)]
+$$
+where at first glance it seems to generate a non-Markov evolution. However, if we choose $L=(1+iH/\hbar)/\sqrt{2}$ we end up with a master equation of the form
+$$
+\dot\rho=-\frac{i}{\hbar}[H,\rho]
+$$
+which corresponds to a Markovian evolution.
+\par We now move on to mention some measures of non-Markovianity based on the sign accompanying the decoherence rate at some given time. To describe non-Markovianity in an individual channel we use
+$$
+f_k(t):=max[0,-\gamma(t)]\geq 0.
+$$
+Or for a time $t$ without considering individual channels
+$$
+f(t)=\sum_{k=1}^{d^2-1}f_k(t)=\frac{1}{2}\sum_{k=1}^{d^2-1}\big[|\gamma_k(t)|-\gamma_k(t)\big]
+$$
+, if we extend this expression but for a time range we would have the expression</p>
+<p>$$
+F_k(t,t&rsquo;)=\int_t^{t&rsquo;}ds f_k(s)
+$$</p>
+<p>which characterizes \emph{the total amount of non-Markovianness on channel $k$ over time step $[t,t&rsquo;]$}. We can also define a discrete measure as the number of strictly negative decoherence rates</p>
+<p>$$
+n(t):= \# \{ k: \gamma_k (t) &lt; 0   \} = \# \{ k:f_k(t) &gt;0 \}
+$$</p>
+<p>we call it <em>the non-Markov index</em>. To exemplify the use of these measures we take the case of a single decoherence channel. We consider the following master equation $\dot\rho=-\frac{i}{\hbar}[K(t),\rho]+\alpha(t)[A(t)\rho A(t)^\dagger-\frac{1}{2}{A(t)^\dagger A(t),\rho}]$. Its canonical form will be
+$$
+\dot\rho=-\frac{i}{\hbar}[H(t),\rho]+\gamma(t)[L(t)\rho L(t)^\dagger-\frac{1}{2}{L(t)^\dagger L(t),\rho}]
+$$
+By the definition of non-Markovianity, the evolution of the system is non-Markovian, at time $t$ if and only if $\gamma(t)&lt;0$. The total amount of non-Markovianity would be calculated as
+$$
+F(t,t&rsquo;)=-\int_{\gamma(t)&lt;0}ds\gamma(s)
+$$
+Furthermore, the discrete non-Markov index would be unity when $\gamma(t)&lt;0$ or zero otherwise.</p>
+<p><strong>Distance measures:</strong> A measure for the non-Markovianity of quantum dynamics of open systems is constructed based on the trace distance of two quantum states which describes the probability of successfully distinguishing these states. The basic idea underlying this construction is that Markovian processes tend to continuously reduce the distinguishability between any two states, while the essential property of non-Markovian behavior is the growth of this distinguishability. The loss of distinguishability of states is interpreted as an information flow from the open system to its environment.\
+To construct the measure for non-Markovianity we need a measure for the distance between two quantum states $\rho_1$ and $\rho_2$. Such a measure is given by the trace distance which is defined as
+$$
+D(\rho_1,\rho_2)=\frac{1}{2}Tr|\rho_1-\rho_2|
+$$
+where $|A|=\sqrt{A^\dagger A}$. A property that we should note is that all trace-preserving and completely positive maps $\Phi$ are contractions for this metric.
+$$
+D(\Phi_{\rho_1},\Phi_{\rho_2})\leq D(\rho_1,\rho_2)
+$$
+This means that no trace-preserving quantum operation can ever increase the distinguishability of two states.
+\par Suppose we have a quantum process given by a Markovian master equation,
+$$
+\frac{d}{dt}\rho(t)=\mathcal{L}\rho(t),
+$$
+with $\mathcal{L}\rho=-i[H,\rho]+\sum_i\gamma_i\Big[A_i\rho A_i\dagger-\frac{1}{2}{A_i\dagger A_i,\rho}\Big]$ involving positive relaxation rates $\gamma_i\geq 0$. Such a master equation leads to dynamical maps $\Phi(t)=exp(\mathcal{L}t)$, $t\geq0$, which describes the dynamics of the density matrix through the relation $\rho(t)=\Phi(\tau)\rho(0)$. It can be shown that
+$$
+D(\rho_1(\tau+t),\rho_2(\tau+t))\leq D(\rho_1(t),\rho_2(t))
+$$
+where $\rho_{1,2}(t)=\Phi(t)\rho_{1,2}(0)$. Hence, the trace distance of states $\rho_{1,2}(t)$, with any initial state $\rho_{1,2}(0)$, is a monotonically decreasing function of time. The interpretation of this is that this is a feature of quantum Markovian processes, implying that under Markovian evolution any two states generally become less and less distinguishable as time increases. Furthermore, it can be proven that the inequality given above holds for every time-dependent Markovian process defined by the master equation with $\gamma_i(t)\geq 0$.
+\par We define the rate of change of the trace distance with
+$$
+\sigma(t,\rho_{1,2}(0)) = \frac{d}{dt}D(\rho_1(t),\rho_2(t)).
+$$
+There are many processes for which $\sigma$ is greater than zero for certain times. It is such processes that we define as \emph{non-Markovian}. We then complement the definition given above for non-Markov processes by now saying that a process is non-Markovian if there exists a pair of initial states $\rho_{1,2}(0)$ and a certain time $t$ such that $\sigma(t,\rho_{1,2}(0))&gt;0$.</p>
+<p>We take the case for one qubit to exemplify this case.
+Given a single-qubit density matrix $\rho$, since Pauli matrices form a basis for $2\times2$ complex matrices, the Bloch sphere representation can be given as:
+$$\rho = I + \vec{r} \cdot \vec{\sigma}$$</p>
+<p>where $\vec{r} = (r_x, r_y, r_z)$ and $|\vec{r}| \leq 1$.</p>
+<p>The expectation values ​​of the Pauli matrices $\sigma_x$, $\sigma_y$ and $\sigma_z$ can be calculated from the density matrix $\rho$ as follows:</p>
+<p>$$r_x = Tr(\rho \sigma_x);\quad r_y = Tr(\rho \sigma_y); \quad r_z = Tr(\rho \sigma_z)$$</p>
+<p>where $Tr$ denotes the trace operation. The trace distance between two qubits in the Bloch representation is equal to half the Euclidean distance between their Bloch vectors. For example, suppose we have two qubits with Bloch vectors $\vec{r_1}$ and $\vec{r_2}$. The Euclidean distance between these vectors is given by:</p>
+<p>$$d(\vec{r_1}, \vec{r_2}) = \sqrt{(r_{1x} - r_{2x})^2 + (r_{1y} - r_{2y})^2 + (r_{1z} - r_{2z})^2}$$</p>
+<p>The trace distance between these qubits is then: $D(\rho_1, \rho_2) = \frac{1}{2} d(\vec{r_1}, \vec{r_2})$. The master equation for a qubit in the Bloch representation is given by:
+$$\frac{d}{dt} \rho = -i [\mathcal{H}, \rho] + \mathcal{L}(\rho)$$
+where $\rho$ is the density matrix of the qubit, $\mathcal{H}$ is the Hamiltonian of the system, and $\mathcal{L}(\rho)$ is the Lindblad superoperator describing the dissipative dynamics of the system.</p>
+<p>The Bloch vector is a representation of a qubit state that is commonly used in quantum mechanics. The Bloch vector is related to the density matrix of a qubit state by:</p>
+<p>$$\vec{r} = \text{Tr}(\rho \vec{\sigma})$$</p>
+<p>where $\rho$ is the density matrix of the qubit state and $\vec{\sigma}$ is a vector containing the three Pauli matrices. The master equation for a qubit in the Bloch representation can be derived from the master equation for a qubit in the density matrix representation using the relationship between the Bloch vector and the density matrix.</p>
+<p>$$\rho = \frac{1}{2}(I + \vec{r} \cdot \vec{\sigma})$$
+The master equation for a qubit in the Bloch representation can be written as:</p>
+<p>$$\frac{d}{dt} \vec{r} = \vec{u} + D \vec{r}$$</p>
+<p>where $\vec{r}$ is the Bloch vector of the qubit state, $\vec{u}$ is the drift vector, and $D$ is the damping matrix. The drift vector $\vec{u}$ and the damping matrix $D$ depend on the specific physical system under consideration. In general, the drift vector $\vec{u}$ describes the coherent evolution of the qubit state, while the damping matrix $D$ describes the incoherent evolution of the qubit state due to ambient noise.
+The drift vector $u_j$ is defined as $(1/2)Tr[\sigma_j\Lambda(1)]$ and the damping matrix $D_{jk}$ is defined as $(1/2)Tr[\sigma_j\Lambda(\sigma_k)]$ . The Bloch equation can be written as $\dot v = u+Dv$ where v is the Bloch vector.</p>
+<p>$$
+u_j = \frac{1}{2}tr[\sigma_j\Lambda(1)];\quad
+D_{jk} = \frac{1}{2}tr[\sigma_j\Lambda(\sigma_k)];\quad
+\frac{dv}{dt} = u + Dv
+$$</p>
+<p>The trace distance of any two density operators, $\rho$ and $\rho+\delta\rho$, is
+$$
+(\delta s_{Tr})^2:=\frac{1}{4}(Tr|\delta\rho|)^2=\frac{1}{4}\delta \textbf{x}.\delta \textbf{x}
+$$
+We want to see what happens when two density matrices differ by a $\delta\rho$ so considering the master equation in the Bloch representation for a Bloch vector we get that $\delta \dot x=D\delta x$, and therefore</p>
+<p>$$
+\frac{d}{dt}((\delta s_{Tr})^2
+)=\frac{1}{4}[\delta\dot x.\delta x+\delta x.\delta\dot x]=\frac{1}{4}\delta x^{T}(D+D{T})\delta x
+$$
+From that equation we see that the trace between a pair of density operators increases if and only if it can increase between a pair of infinitesimally separated states. But, the equation also tells us that it can increase if and only if the matrix $D+D^T$ has positive eigenvalues. That is, \emph{The trace distance of the qubit can precensus non-Markovianity at time $t$ if and only if the damping matrix satisfies the condition}
+$$
+\lambda_{\text{max}}[D(t)+D^T(t)]&gt;0
+$$
+where $\lambda_{\text{max}}(A)$ denotes the maximum eigenvalue of $A$.</p>
+<h1 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">#</a></h1>
+<p>The canonical form of the master equation gives us the mathematical form necessary to be able to evaluate the non-Markovianity of a given system. Such a canonical form leaves us with uniquely determined decoherence rates. We arrive at a positive (negative) canonical decoherence rate corresponding to a Markovian (non-Markovian) evolution. This led us to define the non-Markovianity measure called trace distance which tells us what kind of evolution is going on based on the rate of change of the trace distance. Also, for each of these steps to characterize the non-Markovianity of the system we saw some examples. First, how bringing the system to its canonical form was crucial for the characterization. Second, the case of a single-channel system as a test. Finally, third, we dealt with the case of the one-qubit master equation in its Bloch representation. The above results demonstrate the value of digging deeper into aspects of the non-Markovian evolution characterization. Finally, it would also be interesting to explore the experimental aspects related to the concepts touched on in the text.</p>
+<h1 id="references">References<a hidden class="anchor" aria-hidden="true" href="#references">#</a></h1>
+<p>[1] G. Lindblad, Comm. Math. Phys. 48, 119 (1976)</p>
+<p>[2] M.J.W. Hall, J.D. Cresser, L. Li and E. Andersson, “Canonical form of master equations and characterization of non-Markovianity,” Phys. Rev. A 89, 042120 (2014).</p>
+<p>[3] H.-P. Breuer, E.-M. Laine, and J. Piilo, “Measure for the Degree of Non-Markovian Behavior of Quantum Processes in Open Systems,” Phys. Rev. Lett. 103, 210401 (2009)</p>
+<h1 id="citation">Citation<a hidden class="anchor" aria-hidden="true" href="#citation">#</a></h1>
+<p>Cited as:</p>
+<blockquote>
+<p>Takagui-Perez, R. Kenyi. How to measure the non-Markovianity of a Quantum System? Kenyi&rsquo;Log.<br>
+<a href="https://taogenna.github.io/kenyi-blog/docs/oqs/oqs/">https://taogenna.github.io/kenyi-blog/docs/oqs/oqs/</a></p>
+</blockquote>
+<p>Or</p>
+<pre tabindex="0"><code>@article{something,
+  title   = &#34;How to measure the non-Markovianity of a Quantum System?&#34;,
+  author  = &#34;Takagui-Perez, R. Kenyi&#34;,
+  journal = &#34;https://taogenna.github.io/kenyi-blog/&#34;,
+  year    = &#34;2024&#34;,
+  month   = &#34;Dec&#34;,
+  url     = &#34;https://taogenna.github.io/kenyi-blog/docs/oqs/oqs/&#34;
+}
+</code></pre>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+
+<ul class="share-buttons">
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share How to measure the non-Markovianity of a Quantum System? on x"
+            href="https://x.com/intent/tweet/?text=How%20to%20measure%20the%20non-Markovianity%20of%20a%20Quantum%20System%3f&amp;url=https%3a%2f%2ftaogenna.github.io%2fkenyi-blog%2fdocs%2foqs%2foqs%2f&amp;hashtags=">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share How to measure the non-Markovianity of a Quantum System? on linkedin"
+            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2ftaogenna.github.io%2fkenyi-blog%2fdocs%2foqs%2foqs%2f&amp;title=How%20to%20measure%20the%20non-Markovianity%20of%20a%20Quantum%20System%3f&amp;summary=How%20to%20measure%20the%20non-Markovianity%20of%20a%20Quantum%20System%3f&amp;source=https%3a%2f%2ftaogenna.github.io%2fkenyi-blog%2fdocs%2foqs%2foqs%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share How to measure the non-Markovianity of a Quantum System? on reddit"
+            href="https://reddit.com/submit?url=https%3a%2f%2ftaogenna.github.io%2fkenyi-blog%2fdocs%2foqs%2foqs%2f&title=How%20to%20measure%20the%20non-Markovianity%20of%20a%20Quantum%20System%3f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share How to measure the non-Markovianity of a Quantum System? on facebook"
+            href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2ftaogenna.github.io%2fkenyi-blog%2fdocs%2foqs%2foqs%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share How to measure the non-Markovianity of a Quantum System? on whatsapp"
+            href="https://api.whatsapp.com/send?text=How%20to%20measure%20the%20non-Markovianity%20of%20a%20Quantum%20System%3f%20-%20https%3a%2f%2ftaogenna.github.io%2fkenyi-blog%2fdocs%2foqs%2foqs%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share How to measure the non-Markovianity of a Quantum System? on telegram"
+            href="https://telegram.me/share/url?text=How%20to%20measure%20the%20non-Markovianity%20of%20a%20Quantum%20System%3f&amp;url=https%3a%2f%2ftaogenna.github.io%2fkenyi-blog%2fdocs%2foqs%2foqs%2f">
+            <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share How to measure the non-Markovianity of a Quantum System? on ycombinator"
+            href="https://news.ycombinator.com/submitlink?t=How%20to%20measure%20the%20non-Markovianity%20of%20a%20Quantum%20System%3f&u=https%3a%2f%2ftaogenna.github.io%2fkenyi-blog%2fdocs%2foqs%2foqs%2f">
+            <svg version="1.1" xml:space="preserve" width="30px" height="30px" viewBox="0 0 512 512" fill="currentColor"
+                xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
+                <path
+                    d="M449.446 0C483.971 0 512 28.03 512 62.554L512 449.446C512 483.97 483.97 512 449.446 512L62.554 512C28.03 512 0 483.97 0 449.446L0 62.554C0 28.03 28.029 0 62.554 0L449.446 0ZM183.8767 87.9921H121.8427L230.6673 292.4508V424.0079H281.3328V292.4508L390.1575 87.9921H328.1233L256 238.2489z" />
+            </svg>
+        </a>
+    </li>
+</ul>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2024 <a href="https://taogenna.github.io/kenyi-blog/">Kenyi&#39;Log</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

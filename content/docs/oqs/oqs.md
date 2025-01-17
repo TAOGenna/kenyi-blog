@@ -1,7 +1,7 @@
 +++
 title = 'How to measure the non-Markovianity of a Quantum System?'
 date = 2023-07-26T08:11:59-05:00
-draft = true
+draft = false
 categories = ["math"]
 +++
 

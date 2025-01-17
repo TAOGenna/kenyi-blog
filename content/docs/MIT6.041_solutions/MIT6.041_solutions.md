@@ -1,7 +1,7 @@
 +++
 title = 'My solutions of MIT 6.041: Introduction to Probability'
 date = 2024-12-25T08:13:07-05:00
-draft = false
+draft = true
 showtoc = true
 tocopen = true
 categories = ["math"]

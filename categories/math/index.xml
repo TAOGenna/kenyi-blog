@@ -6,15 +6,14 @@
     <description>Recent content in Math on Kenyi&#39;Log</description>
     <generator>Hugo -- 0.125.7</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 26 Dec 2023 11:31:18 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 26 Jul 2023 08:11:59 -0500</lastBuildDate>
     <atom:link href="https://taogenna.github.io/kenyi-blog/categories/math/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Radio-over-Fiber System with Passive Carrier-to-Sideband Reduction</title>
-      <link>https://taogenna.github.io/kenyi-blog/docs/rof/rof/</link>
-      <pubDate>Tue, 26 Dec 2023 11:31:18 -0500</pubDate>
-      <guid>https://taogenna.github.io/kenyi-blog/docs/rof/rof/</guid>
-      <description>[TODO: add figures]
-Problem Design a system that implements a Radio-over-Fiber (RoF) link with 3 channels, employing single sideband modulation with an optical carrier. Use a passive filtering technique to reduce the Carrier-to-Sideband Ratio (CSR) in order to improve the link performance. The optical carrier frequencies must be separated by 0.4 nm (50 GHz), and the RF carriers must be within the range of 18 GHz to 28 GHz. The data transmission rate for each channel should be 2.</description>
+      <title>How to measure the non-Markovianity of a Quantum System?</title>
+      <link>https://taogenna.github.io/kenyi-blog/docs/oqs/oqs/</link>
+      <pubDate>Wed, 26 Jul 2023 08:11:59 -0500</pubDate>
+      <guid>https://taogenna.github.io/kenyi-blog/docs/oqs/oqs/</guid>
+      <description>Final term paper for the course of Open Quantum Systems. Introduction Master equations govern the time evolution of a quantum system interacting with an environment and can be written in a variety of forms. Time-independent or memoryless master equations can be expressed in the well-known Lindblad form. In fact, any master equation local in time, Markovian or non-Markovian, can also be written in a Lindblad-like form. A diagonalization procedure results in a unique, canonical representation of the equation, which can be used to fully characterize the non-Markovianity of the time evolution.</description>
     </item>
   </channel>
 </rss>

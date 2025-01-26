@@ -15,5 +15,12 @@
       <guid>https://taogenna.github.io/kenyi-blog/docs/oqs/oqs/</guid>
       <description>Final term paper for the course of Open Quantum Systems. Introduction Master equations govern the time evolution of a quantum system interacting with an environment and can be written in a variety of forms. Time-independent or memoryless master equations can be expressed in the well-known Lindblad form. In fact, any master equation local in time, Markovian or non-Markovian, can also be written in a Lindblad-like form. A diagonalization procedure results in a unique, canonical representation of the equation, which can be used to fully characterize the non-Markovianity of the time evolution.</description>
     </item>
+    <item>
+      <title>Bookshelf</title>
+      <link>https://taogenna.github.io/kenyi-blog/bookshelf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://taogenna.github.io/kenyi-blog/bookshelf/</guid>
+      <description>A list of my published books.</description>
+    </item>
   </channel>
 </rss>

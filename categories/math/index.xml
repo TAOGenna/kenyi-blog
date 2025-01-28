@@ -6,8 +6,16 @@
     <description>Recent content in Math on Kenyi&#39;Log</description>
     <generator>Hugo -- 0.125.7</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Jul 2023 08:11:59 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 28 Jan 2025 12:14:29 -0500</lastBuildDate>
     <atom:link href="https://taogenna.github.io/kenyi-blog/categories/math/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Application of the self-consistent Hartree-Fock method</title>
+      <link>https://taogenna.github.io/kenyi-blog/docs/hartree_fock/hartree_fock/</link>
+      <pubDate>Tue, 28 Jan 2025 12:14:29 -0500</pubDate>
+      <guid>https://taogenna.github.io/kenyi-blog/docs/hartree_fock/hartree_fock/</guid>
+      <description>This is a summary of the computational method I used for my master&amp;rsquo;s thesis [1]. I will focus on the Hartree-Fock approximation.
+Model The problem we were trying to attack was the correct modeling of the Majorana zero modes in a superconducting nanowire with a quantum dot attached at one of the ends of the wire. The Hamiltonian describing the system is $$ \begin{align*} H &amp;= \sum_{j=1}^{N-1} \left( -t c_{j+1}^\dagger c_j + \Delta c_{j+1}^\dagger c_j^\dagger + \text{H.</description>
+    </item>
     <item>
       <title>How to measure the non-Markovianity of a Quantum System?</title>
       <link>https://taogenna.github.io/kenyi-blog/docs/oqs/oqs/</link>

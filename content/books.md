@@ -36,4 +36,5 @@ The first three books were crucial to learn high energy physics has been stuck f
 **Elon Musk**, Ashlee Vance <p>
 **Einstein**, Walter Isaacson<p>
 **Origin**, Dan Brown<p>
+**Cuando las rectas se vuelven curvas**, National Geographic<p>
  

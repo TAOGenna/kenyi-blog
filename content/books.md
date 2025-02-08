@@ -15,6 +15,7 @@ summary: "A list of my published books."
 ---
 ## 2023
 
+**The Metamorphosis of Prime Intellect**, Roger Williams<p> 
 **The Usefulness of Useless Knowledge**, Abraham Flexner<p>
 **Memories of a Theoretical Physcist**, Joseph Polchinski
 
@@ -34,7 +35,9 @@ The first three books were crucial to learn high energy physics has been stuck f
 ## Before 2022
 
 **Elon Musk**, Ashlee Vance <p>
-**Einstein**, Walter Isaacson<p>
+**Einstein**, Barry Parker<p>
 **Origin**, Dan Brown<p>
 **Cuando las rectas se vuelven curvas**, National Geographic<p>
+**Do Not Erase: Mathematicians and Their Chalkboards**, Jessica Wynne<p>
+**Yo Visité Ganimedes**, Yosip Ibrahim<p>
  

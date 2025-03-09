@@ -7,6 +7,8 @@ summary: "A list of my published books."
 
 ## 2025
 
+- **What I Talk About When I Talk About Running**, Haruki Murakami
+
 ---
 ## 2024
 

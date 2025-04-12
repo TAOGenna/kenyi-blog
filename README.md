@@ -1,3 +1,11 @@
+## Never forget
+- If you want to test locally use the localhost
+- If you are about to push your commits to Github comment the one with localhost and leave the first line uncommented
+```
+baseURL: "https://taogenna.github.io/kenyi-blog/"
+# baseURL: "http://localhost:1313"
+```
+
 ## How to create a new blog 
 ```
 hugo new docs/<name of the post>/<name of the post>.md

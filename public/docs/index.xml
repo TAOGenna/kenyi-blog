@@ -6,8 +6,19 @@
     <description>Recent content in Docs on Kenyi&#39;Log</description>
     <generator>Hugo -- 0.146.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 28 Jan 2025 12:14:29 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 12 Apr 2025 17:57:53 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/docs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Advancements in Representing Atomic Environments for Machine Learning Interatomic Potentials</title>
+      <link>http://localhost:1313/docs/eeml_sub/eeml_sub/</link>
+      <pubDate>Sat, 12 Apr 2025 17:57:53 -0500</pubDate>
+      <guid>http://localhost:1313/docs/eeml_sub/eeml_sub/</guid>
+      <description>&lt;div style=&#34;text-align: center;&#34;&gt;
+    The extended abstract for the EEML summer school.
+&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Accurate and efficient interatomic potentials are crucial for simulating materials at the atomic level, and machine learning interatomic potentials (MLIPs) have emerged as a powerful alternative to traditional methods. A central aspect of MLIP development is the representation of local atomic environments, which significantly impacts the accuracy, transferability, and computational cost of the resulting potentials. This extended abstract reviews recent advancements in representing atomic environments for MLIPs.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Application of the self-consistent Hartree-Fock method</title>
       <link>http://localhost:1313/docs/hartree_fock/hartree_fock/</link>

@@ -1,5 +1,5 @@
-baseURL: "https://taogenna.github.io/kenyi-blog/"
-# baseURL: "http://localhost:1313"
+# baseURL: "https://taogenna.github.io/kenyi-blog/"
+baseURL: "http://localhost:1313"
 languageCode: en-us
 title: Kenyi'Log
 theme: PaperMod

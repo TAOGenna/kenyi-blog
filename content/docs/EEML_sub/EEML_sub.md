@@ -6,7 +6,7 @@ categories = ["physics"]
 +++
 
 <div style="text-align: center;">
-    The extended abstract for the EEML summer school.
+    Extended Abstract
 </div>
 
 > Accurate and efficient interatomic potentials are crucial for simulating materials at the atomic level, and machine learning interatomic potentials (MLIPs) have emerged as a powerful alternative to traditional methods. A central aspect of MLIP development is the representation of local atomic environments, which significantly impacts the accuracy, transferability, and computational cost of the resulting potentials. This extended abstract reviews recent advancements in representing atomic environments for MLIPs. 

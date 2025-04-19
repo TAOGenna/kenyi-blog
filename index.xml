@@ -13,7 +13,7 @@
       <link>https://taogenna.github.io/kenyi-blog/docs/eeml_sub/eeml_sub/</link>
       <pubDate>Sat, 12 Apr 2025 17:57:53 -0500</pubDate>
       <guid>https://taogenna.github.io/kenyi-blog/docs/eeml_sub/eeml_sub/</guid>
-      <description>The extended abstract for the EEML summer school. Accurate and efficient interatomic potentials are crucial for simulating materials at the atomic level, and machine learning interatomic potentials (MLIPs) have emerged as a powerful alternative to traditional methods. A central aspect of MLIP development is the representation of local atomic environments, which significantly impacts the accuracy, transferability, and computational cost of the resulting potentials. This extended abstract reviews recent advancements in representing atomic environments for MLIPs.</description>
+      <description>Extended Abstract Accurate and efficient interatomic potentials are crucial for simulating materials at the atomic level, and machine learning interatomic potentials (MLIPs) have emerged as a powerful alternative to traditional methods. A central aspect of MLIP development is the representation of local atomic environments, which significantly impacts the accuracy, transferability, and computational cost of the resulting potentials. This extended abstract reviews recent advancements in representing atomic environments for MLIPs.</description>
     </item>
     <item>
       <title>Application of the self-consistent Hartree-Fock method</title>

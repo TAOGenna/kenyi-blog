@@ -36,7 +36,7 @@ The first three books were crucial to learn high energy physics has been stuck f
 **Project Hail Mary**, Andy Weir
 
 ---
-## Started by not finished d: 
+## Started but not finished d: 
 
 **Brainstorms: Philosophical Essays on Mind and Psychology**, Daniel C. Dennett<p>
 **Dune**, Frank Herbert<p>

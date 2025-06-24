@@ -16,6 +16,7 @@ summary: "A list of my published books."
 **Situational Awareness**, Leopold Aschenbrenner<p>
 **The Little Book of Deep Learning**, Fransois Fleuret<p>
 **Meta Learning**, Radek Osmulski
+
 ---
 ## 2023
 

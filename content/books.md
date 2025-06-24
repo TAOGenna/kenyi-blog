@@ -13,8 +13,9 @@ summary: "A list of my published books."
 ---
 ## 2024
 
-**The Little Book of Deep Learning**, Fransois Fleuret
-
+**Situational Awareness**, Leopold Aschenbrenner<p>
+**The Little Book of Deep Learning**, Fransois Fleuret<p>
+**Meta Learning**, Radek Osmulski
 ---
 ## 2023
 
@@ -35,12 +36,31 @@ The first three books were crucial to learn high energy physics has been stuck f
 **Project Hail Mary**, Andy Weir
 
 ---
-## Before 2022
+## Started by not finished d: 
 
-**Elon Musk**, Ashlee Vance <p>
-**Einstein**, Barry Parker<p>
-**Origin**, Dan Brown<p>
-**Cuando las rectas se vuelven curvas**, National Geographic<p>
-**Do Not Erase: Mathematicians and Their Chalkboards**, Jessica Wynne<p>
-**Yo Visité Ganimedes**, Yosip Ibrahim<p>
- 
+**Brainstorms: Philosophical Essays on Mind and Psychology**, Daniel C. Dennett<p>
+**Dune**, Frank Herbert<p>
+**Tiempos Recios**, Vargas Llosa<p>
+**Deep Work**, Cal Newport<p>
+**Maker of Patterns**, Freeman Dyson<p>
+**Well, Doc. You're in**, Freeman Dyson<p>
+**1984**, George Orwell<p>
+**Hitler's first hundred days**, Peter Fritzsche<p>
+**Androids: the team that build operating system**, Chet Haase<p>
+**Countdown to Zero Day**, Kim Zetter<p>
+**Just for Fun**, Linus Torvalds<p>
+**The Overthinking Cure**, Nick Trenton<p>
+**Alien Oceans**, Kevin Hands<p>
+**A Guide to CP**, Antti Laksoneen<p>
+**The Science of Interstellar**, Kip Thorne<p>
+**Feynman Lectures**, Richard Feynman<p>
+**Surely You're Joking, Mr. Feynman**, Richard Feynman<p>
+**Six Easy Pieces**, Richard Feynman<p>
+**QED**, Richard Feynman<p>
+**Atomic Habits**, James Clear<p>
+**How to Do a TED Talk**, Jeremey Donovan<p>
+**Solving Mathematical Problems**, Terence Tao<p>
+**How to Solve It**, Polya<p>
+**The Birth of a Theorem**, Cédric Villani<p>
+**Quantum Computing Since Democritus**, Scott Aaronson<p>
+**J. A. Balseiro: Crónica de una Ilusión. Una Historia de la Física en la Argentina**, Arturo Lopez Davalos

@@ -4,17 +4,25 @@
     <title>Docs on Kenyi&#39;Log</title>
     <link>http://localhost:1313/docs/</link>
     <description>Recent content in Docs on Kenyi&#39;Log</description>
-    <generator>Hugo -- 0.146.2</generator>
+    <generator>Hugo -- 0.147.9</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 12 Apr 2025 17:57:53 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 28 Jun 2025 16:38:03 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/docs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>High Signal P</title>
+      <link>http://localhost:1313/docs/high-signal-p/high-signal-p/</link>
+      <pubDate>Sat, 28 Jun 2025 16:38:03 -0500</pubDate>
+      <guid>http://localhost:1313/docs/high-signal-p/high-signal-p/</guid>
+      <description>&lt;h1 id=&#34;overview&#34;&gt;Overview&lt;/h1&gt;
+&lt;p&gt;Since I got interested in ML, and technology in general, I&amp;rsquo;ve gathered some kind of mental list of people&amp;rsquo;s blogs I should check from time to time. I call these &lt;em&gt;high signal people&lt;/em&gt;. But not only they share technical knowledge from ML or SWE, the blogs I enjoy the most are the ones that dig deep into whatever thing you consider normal. Take for example the article from Julian Schrittwieser on &lt;em&gt;HDR photography&lt;/em&gt;. Is it related to his past work on Google Deepmind? No, he&amp;rsquo;s just playing and enjoying the tech we have right now. For someone like me who has just started his journey into tech these blogs are fascinating and I thank them very much for being this open and sharing cool stuff.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Advancements in Representing Atomic Environments for Machine Learning Interatomic Potentials</title>
       <link>http://localhost:1313/docs/eeml_sub/eeml_sub/</link>
       <pubDate>Sat, 12 Apr 2025 17:57:53 -0500</pubDate>
       <guid>http://localhost:1313/docs/eeml_sub/eeml_sub/</guid>
       <description>&lt;div style=&#34;text-align: center;&#34;&gt;
-    The extended abstract for the EEML summer school.
+    Extended Abstract
 &lt;/div&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Accurate and efficient interatomic potentials are crucial for simulating materials at the atomic level, and machine learning interatomic potentials (MLIPs) have emerged as a powerful alternative to traditional methods. A central aspect of MLIP development is the representation of local atomic environments, which significantly impacts the accuracy, transferability, and computational cost of the resulting potentials. This extended abstract reviews recent advancements in representing atomic environments for MLIPs.&lt;/p&gt;</description>

@@ -4,20 +4,17 @@
     <title>AI on Kenyi&#39;Log</title>
     <link>https://taogenna.github.io/kenyi-blog/categories/ai/</link>
     <description>Recent content in AI on Kenyi&#39;Log</description>
-    <generator>Hugo -- 0.125.7</generator>
+    <generator>Hugo -- 0.147.9</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 16 Nov 2024 07:54:35 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 28 Jun 2025 16:38:03 -0500</lastBuildDate>
     <atom:link href="https://taogenna.github.io/kenyi-blog/categories/ai/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Test</title>
-      <link>https://taogenna.github.io/kenyi-blog/docs/post1/post1/</link>
-      <pubDate>Sat, 16 Nov 2024 07:54:35 -0500</pubDate>
-      <guid>https://taogenna.github.io/kenyi-blog/docs/post1/post1/</guid>
-      <description>some code inline code Here is some inline code that you can use in a paragraph.
-some other inline &amp;lt; figure src=&amp;quot;../image1.jpg&amp;quot; alt=&amp;quot;Description of the image&amp;quot; caption=&amp;quot;Your caption text here&amp;quot; class=&amp;quot;align-center&amp;quot; &amp;gt; code.
-bloc code def something(): return tmr this is a equation testing inline equations $a-3$ | wave equations $i\hbar \frac{\partial}{\partial t} \Psi = \hat{H}\Psi$, now math block:
-$$ i\hbar \frac{\partial}{\partial t} \Psi = \hat{H}\Psi $$
-testing max lenght: this is some randon words randon words randon words randon words randon words randon words randon wordsrandon wordsrandon wordsrandon words randon words this is a block equations</description>
+      <title>High Signal P</title>
+      <link>https://taogenna.github.io/kenyi-blog/docs/high-signal-p/high-signal-p/</link>
+      <pubDate>Sat, 28 Jun 2025 16:38:03 -0500</pubDate>
+      <guid>https://taogenna.github.io/kenyi-blog/docs/high-signal-p/high-signal-p/</guid>
+      <description>&lt;h1 id=&#34;overview&#34;&gt;Overview&lt;/h1&gt;
+&lt;p&gt;Since I got interested in ML, and technology in general, I&amp;rsquo;ve gathered some kind of mental list of people&amp;rsquo;s blogs I should check from time to time. I call these &lt;em&gt;high signal people&lt;/em&gt;. But not only they share technical knowledge from ML or SWE, the blogs I enjoy the most are the ones that dig deep into whatever thing you consider normal. Take for example the article from Julian Schrittwieser on &lt;em&gt;HDR photography&lt;/em&gt;. Is it related to his past work on Google Deepmind? No, he&amp;rsquo;s just playing and enjoying the tech we have right now. For someone like me who has just started his journey into tech these blogs are fascinating and I thank them very much for being this open and sharing cool stuff.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

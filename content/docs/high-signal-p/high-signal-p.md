@@ -39,7 +39,7 @@ Also, I might not limit my list only to tech stuff.
 
 [Eugene Yan](https://eugeneyan.com/): Blogs by principal applied scientist at Amazon.
 
-### BioML
+## BioML
 
 [Gabriele Corso](https://github.com/gcorso): One of the creators of Boltz, a library competing with Alphafold. 
 

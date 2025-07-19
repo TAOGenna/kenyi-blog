@@ -39,6 +39,11 @@ Also, I might not limit my list only to tech stuff.
 
 [Eugene Yan](https://eugeneyan.com/): Blogs by principal applied scientist at Amazon.
 
+Bojan Tunguz: xNvidia, grandmaster in Kaggle, xgboost guru(?)
+- https://github.com/tunguz/ML_Resources
+- https://www.xgblog.ai/p/xgboost-is-all-you-need (A series of 7 blogs on Xgboost)
+- Other Kaggle GMs that prob have posts: [David Austin](https://www.kaggle.com/tivfrvqhs5), [Ruchi Bathia](https://www.kaggle.com/tivfrvqhs5) and [Chris Deotte](https://www.kaggle.com/cdeotte).
+
 ## BioML
 
 [Gabriele Corso](https://github.com/gcorso): One of the creators of Boltz, a library competing with Alphafold. 

@@ -13,6 +13,7 @@ summary: "A list of my published books."
 ---
 ## 2024
 
+**Deep Work**, Cal Newport<p>
 **Situational Awareness**, Leopold Aschenbrenner<p>
 **The Little Book of Deep Learning**, Fransois Fleuret<p>
 **Meta Learning**, Radek Osmulski

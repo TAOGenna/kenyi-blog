@@ -7,13 +7,13 @@ summary: "A list of my published books."
 
 ## 2025
 
+**Deep Work**, Cal Newport<p>
 **A Theory of Fun for Game Design**, Raph Koster<p>
 **What I Talk About When I Talk About Running**, Haruki Murakami
 
 ---
 ## 2024
 
-**Deep Work**, Cal Newport<p>
 **Situational Awareness**, Leopold Aschenbrenner<p>
 **The Little Book of Deep Learning**, Fransois Fleuret<p>
 **Meta Learning**, Radek Osmulski

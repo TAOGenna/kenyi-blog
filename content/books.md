@@ -6,7 +6,7 @@ summary: "A list of my published books."
 ---
 
 ## 2025
-
+**Stories of Your Life and Others**, Ted Chiang<p>
 **Deep Work**, Cal Newport<p>
 **A Theory of Fun for Game Design**, Raph Koster<p>
 **What I Talk About When I Talk About Running**, Haruki Murakami

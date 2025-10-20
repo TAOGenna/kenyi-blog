@@ -1,4 +1,5 @@
 ## Never forget
+The following is done in the `hugo.yaml`
 - If you want to test locally use the localhost
 - If you are about to push your commits to Github comment the one with localhost and leave the first line uncommented
 ```

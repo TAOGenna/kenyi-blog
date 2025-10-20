@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Categories on Kenyi&#39;Log</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>http://localhost:34019/kenyi-blog/categories/</link>
     <description>Recent content in Categories on Kenyi&#39;Log</description>
-    <generator>Hugo -- 0.147.9</generator>
+    <generator>Hugo -- 0.151.1</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 20 Oct 2025 12:20:23 -0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:34019/kenyi-blog/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI</title>
-      <link>http://localhost:1313/categories/ai/</link>
+      <link>http://localhost:34019/kenyi-blog/categories/ai/</link>
       <pubDate>Mon, 20 Oct 2025 12:20:23 -0500</pubDate>
-      <guid>http://localhost:1313/categories/ai/</guid>
+      <guid>http://localhost:34019/kenyi-blog/categories/ai/</guid>
       <description></description>
     </item>
     <item>
       <title>Physics</title>
-      <link>http://localhost:1313/categories/physics/</link>
+      <link>http://localhost:34019/kenyi-blog/categories/physics/</link>
       <pubDate>Sat, 12 Apr 2025 17:57:53 -0500</pubDate>
-      <guid>http://localhost:1313/categories/physics/</guid>
+      <guid>http://localhost:34019/kenyi-blog/categories/physics/</guid>
       <description></description>
     </item>
     <item>
       <title>Math</title>
-      <link>http://localhost:1313/categories/math/</link>
+      <link>http://localhost:34019/kenyi-blog/categories/math/</link>
       <pubDate>Tue, 28 Jan 2025 12:14:29 -0500</pubDate>
-      <guid>http://localhost:1313/categories/math/</guid>
+      <guid>http://localhost:34019/kenyi-blog/categories/math/</guid>
       <description></description>
     </item>
     <item>
       <title>Art</title>
-      <link>http://localhost:1313/categories/art/</link>
-      <pubDate>Sat, 16 Nov 2024 07:54:35 -0500</pubDate>
-      <guid>http://localhost:1313/categories/art/</guid>
+      <link>http://localhost:34019/kenyi-blog/categories/art/</link>
+      <pubDate>Sun, 17 Nov 2024 23:49:06 -0500</pubDate>
+      <guid>http://localhost:34019/kenyi-blog/categories/art/</guid>
       <description></description>
     </item>
     <item>
       <title>Programming</title>
-      <link>http://localhost:1313/categories/programming/</link>
+      <link>http://localhost:34019/kenyi-blog/categories/programming/</link>
       <pubDate>Sat, 16 Nov 2024 07:54:35 -0500</pubDate>
-      <guid>http://localhost:1313/categories/programming/</guid>
+      <guid>http://localhost:34019/kenyi-blog/categories/programming/</guid>
       <description></description>
     </item>
   </channel>

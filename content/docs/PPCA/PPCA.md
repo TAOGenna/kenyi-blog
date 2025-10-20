@@ -39,7 +39,9 @@ Two immediate facts:
 2. The model has a rotational ambiguity in $W$: replacing $W$ by $W R$ for any orthogonal $R\in\mathbb{R}^{q\times q}$ leaves the model unchanged (with appropriate change of latent coordinates). So $W$ is identifiable only up to orthogonal transforms.
 
 For the sake of clarity I'll use the explanation of [Oliver](https://medium.com/practical-coding/the-simplest-generative-model-you-probably-missed-c840d68b704):
-{{< figure src="../ppca_prince.jpg" alt="Description of the image" caption="Bishop’s “Pattern Recognition and Machine Learning”, chapter 12." class="align-center" >}}
+
+{{< figure src="../../PPCA/ppca_prince.jpg" alt="Description of the image" caption="Bishop’s “Pattern Recognition and Machine Learning”, chapter 12." class="align-center" >}}
+<!-- {{< figure src="../ppca_prince.png" alt="Description of the image" caption="Bishop’s “Pattern Recognition and Machine Learning”, chapter 12." class="align-center" >}} -->
 - Left panel: After sampling a variable from the latent distribution,
 - Middle panel: The visibles are drawn from an isotropic Gaussian (diagonal covariance matrix) around $W * x_h + \mu$.
 - Right panel: The resulting marginal distribution for the observables is also a Gaussian, but not isotropic.
@@ -125,14 +127,14 @@ Two intuitions:
 # Likelihood for a dataset and maximum likelihood estimation
 
 Given $N$ i.i.d. datapoints $\{t_i\}_{i=1}^N$, 
-{{< rawhtml >}}
+{{<rawhtml>}}
 $$
 \begin{align*}
 p(T | W,\psi, \mu) &= \prod_{i=1}^N p(t_i | W,\psi, \mu)\\
 &= (2\pi)^{-ND/2}|C|^{-N/2}\exp{\Big\{ -\frac{1}{2}\sum_{i=1}^N (t_i-\mu)^TC^{-1}(t_i-\mu) \Big\}}
 \end{align*}
 $$
-{{< /rawhtml >}}
+{{</rawhtml>}}
 the log-likelihood is
 $$
 \log p(T\mid W,\sigma^2,\mu)
@@ -212,7 +214,7 @@ This generates samples from $\mathcal{N}(\mu, W W^\top + \sigma^2 I_d)$. So PPCA
 
 # Code and visuals
 
-{{< figure src="../ppca_output.jpg" alt="Description of the image" caption="We start from the observed data (in blue) and through the PPCA max log likelihood we find the optimized parameters, which once plugged in the linear relation and sample some values from the latent space we effectively generate a new dataset (in red) with similar distribution as the observed dataset." class="align-center"  >}}
+{{< figure src="../../PPCA/ppca_output.png" alt="Description of the image" caption="We start from the observed data (in blue) and through the PPCA max log likelihood we find the optimized parameters, which once plugged in the linear relation and sample some values from the latent space we effectively generate a new dataset (in red) with similar distribution as the observed dataset." class="align-center"  >}}
 
 ```python
 import numpy as np

@@ -2,25 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Kenyi&#39;Log</title>
-    <link>http://localhost:1313/</link>
+    <link>http://localhost:34019/kenyi-blog/</link>
     <description>Recent content on Kenyi&#39;Log</description>
-    <generator>Hugo -- 0.147.9</generator>
+    <generator>Hugo -- 0.151.1</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 20 Oct 2025 12:20:23 -0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:34019/kenyi-blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PPCA: The Minimal Generative Model</title>
-      <link>http://localhost:1313/docs/ppca/ppca/</link>
+      <link>http://localhost:34019/kenyi-blog/docs/ppca/ppca/</link>
       <pubDate>Mon, 20 Oct 2025 12:20:23 -0500</pubDate>
-      <guid>http://localhost:1313/docs/ppca/ppca/</guid>
+      <guid>http://localhost:34019/kenyi-blog/docs/ppca/ppca/</guid>
       <description>&lt;h1 id=&#34;ppca-probabilistic-principal-component-analysis&#34;&gt;PPCA: Probabilistic Principal Component Analysis&lt;/h1&gt;
-&lt;p&gt;PCA is one of those algorithms you learn early and then treat as a black box: center the data, compute the top eigenvectors of the sample covariance, project. But PCA &lt;em&gt;feels&lt;/em&gt; algebraic — where does it come from probabilistically? Probabilistic PCA (PPCA) answers that question: it is the &lt;strong&gt;maximum-likelihood solution of a simple linear Gaussian latent-variable model&lt;/strong&gt;. Understanding PPCA is a tiny, high-value step on the path to modern generative models (VAEs, normalizing flows): it isolates the linear + Gaussian case where every calculation is analytic, so you can see clearly how inference and likelihood tie together.&lt;/p&gt;</description>
+&lt;p&gt;PCA is one of those algorithms you learn early and then treat as a black box: center the data, compute the top eigenvectors of the sample covariance, project. But PCA &lt;em&gt;feels&lt;/em&gt; algebraic, where does it come from probabilistically? Probabilistic PCA (PPCA) answers that question: it is the &lt;strong&gt;maximum-likelihood solution of a simple linear Gaussian latent-variable model&lt;/strong&gt;. Understanding PPCA is a tiny, high-value step on the path to modern generative models (VAEs, normalizing flows): it isolates the linear + Gaussian case where every calculation is analytic, so you can see clearly how inference and likelihood tie together.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>High Signal P</title>
+      <link>http://localhost:34019/kenyi-blog/docs/high-signal-p/high-signal-p/</link>
+      <pubDate>Sat, 28 Jun 2025 16:38:03 -0500</pubDate>
+      <guid>http://localhost:34019/kenyi-blog/docs/high-signal-p/high-signal-p/</guid>
+      <description>&lt;h1 id=&#34;overview&#34;&gt;Overview&lt;/h1&gt;
+&lt;p&gt;Since I got interested in ML, and technology in general, I&amp;rsquo;ve gathered some kind of mental list of people&amp;rsquo;s blogs I should check from time to time. I call these &lt;em&gt;high signal people&lt;/em&gt;. But not only they share technical knowledge from ML or SWE, the blogs I enjoy the most are the ones that dig deep into whatever thing you consider normal.&lt;/p&gt;
+&lt;h2 id=&#34;what-this-post-is-about&#34;&gt;What this post is about&lt;/h2&gt;
+&lt;p&gt;Here I will just be listing all the &lt;em&gt;high signal people/blogs&lt;/em&gt; I found so far. This post in particular will serve as a repo so I don&amp;rsquo;t keep things locally.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Advancements in Representing Atomic Environments for Machine Learning Interatomic Potentials</title>
-      <link>http://localhost:1313/docs/eeml_sub/eeml_sub/</link>
+      <link>http://localhost:34019/kenyi-blog/docs/eeml_sub/eeml_sub/</link>
       <pubDate>Sat, 12 Apr 2025 17:57:53 -0500</pubDate>
-      <guid>http://localhost:1313/docs/eeml_sub/eeml_sub/</guid>
+      <guid>http://localhost:34019/kenyi-blog/docs/eeml_sub/eeml_sub/</guid>
       <description>&lt;div style=&#34;text-align: center;&#34;&gt;
     Extended Abstract
 &lt;/div&gt;
@@ -29,9 +39,9 @@
     </item>
     <item>
       <title>Application of the self-consistent Hartree-Fock method</title>
-      <link>http://localhost:1313/docs/hartree_fock/hartree_fock/</link>
+      <link>http://localhost:34019/kenyi-blog/docs/hartree_fock/hartree_fock/</link>
       <pubDate>Tue, 28 Jan 2025 12:14:29 -0500</pubDate>
-      <guid>http://localhost:1313/docs/hartree_fock/hartree_fock/</guid>
+      <guid>http://localhost:34019/kenyi-blog/docs/hartree_fock/hartree_fock/</guid>
       <description>&lt;p&gt;This is a summary of the computational method I used for my &lt;a href=&#34;https://taogenna.github.io/assets/master_thesis.pdf&#34;&gt;master&amp;rsquo;s thesis&lt;/a&gt; [1]. I will focus on the Hartree-Fock approximation.&lt;/p&gt;
 &lt;h2 id=&#34;model&#34;&gt;Model&lt;/h2&gt;
 &lt;p&gt;The problem we were trying to attack was the correct modeling of the Majorana zero modes in a superconducting nanowire with a quantum dot attached at one of the ends of the wire. The Hamiltonian describing the system is
@@ -47,10 +57,66 @@ $$
 The line is the Hamiltonian for the Kitaev chain, the second for the quantum dot and its hopping with the first site of the nanowire, and the third one accounts for the Coulomb repulsion between the quantum dot and the first site.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>My solutions of MIT 6.041: Introduction to Probability</title>
+      <link>http://localhost:34019/kenyi-blog/docs/mit6.041_solutions/mit6.041_solutions/</link>
+      <pubDate>Wed, 25 Dec 2024 08:13:07 -0500</pubDate>
+      <guid>http://localhost:34019/kenyi-blog/docs/mit6.041_solutions/mit6.041_solutions/</guid>
+      <description>&lt;p&gt;&lt;span style=&#34;color:rgb(39, 109, 223);&#34;&gt;[TODO: upload pdfs]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;So far, I’ve written about three types of generative models, GAN, VAE, and Flow-based models. They have shown great success in generating high-quality samples, but each has some limitations of its&lt;/p&gt;
+&lt;h2 id=&#34;assignments&#34;&gt;Assignments&lt;/h2&gt;
+&lt;iframe src=&#34;http://localhost:34019/kenyi-blog/prueba.pdf&#34; width=&#34;100%&#34; height=&#34;600px&#34;&gt;
+    Your browser does not support iframes. 
+    &lt;a href=&#34;http://localhost:34019/kenyi-blog/prueba.pdf&#34;&gt;Click here to view the PDF&lt;/a&gt;.
+&lt;/iframe&gt;
+&lt;h2 id=&#34;recitations&#34;&gt;Recitations&lt;/h2&gt;
+&lt;h2 id=&#34;tutorials&#34;&gt;Tutorials&lt;/h2&gt;</description>
+    </item>
+    <item>
+      <title>Relearning Music</title>
+      <link>http://localhost:34019/kenyi-blog/docs/post2/relearning-music/</link>
+      <pubDate>Sun, 17 Nov 2024 23:49:06 -0500</pubDate>
+      <guid>http://localhost:34019/kenyi-blog/docs/post2/relearning-music/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve been playing guitar since I was 10, I think. I picked at 15 when I performed two of the hardest songs I ever tried&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Hotel california&lt;/li&gt;
+&lt;li&gt;A river flows in you - Sungha Jung arrangement&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Since then little effort I made to make progress. So why then I want to relearn music now and what is the meaning of &lt;em&gt;relearn&lt;/em&gt;? I learned guitar in a very rustic way: picked up a song I liked and them tried to reproduce it. Is this a legitimate way of learning music? I mean, sure, but there&amp;rsquo;re levels of appretiations when interpreting or even just listening to a song.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Test</title>
+      <link>http://localhost:34019/kenyi-blog/docs/post1/post1/</link>
+      <pubDate>Sat, 16 Nov 2024 07:54:35 -0500</pubDate>
+      <guid>http://localhost:34019/kenyi-blog/docs/post1/post1/</guid>
+      <description>&lt;h1 id=&#34;some-code&#34;&gt;some code&lt;/h1&gt;
+&lt;h2 id=&#34;inline-code&#34;&gt;inline code&lt;/h2&gt;
+&lt;p&gt;Here is some &lt;code&gt;inline code&lt;/code&gt; that you can use in a paragraph.&lt;/p&gt;
+&lt;p&gt;some other inline &lt;code&gt;&amp;lt; figure src=&amp;quot;../image1.jpg&amp;quot; alt=&amp;quot;Description of the image&amp;quot; caption=&amp;quot;Your caption text here&amp;quot; class=&amp;quot;align-center&amp;quot; &amp;gt;&lt;/code&gt; code.&lt;/p&gt;
+&lt;h2 id=&#34;bloc-code&#34;&gt;bloc code&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;something&lt;/span&gt;():
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; tmr
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;this-is-a-equation&#34;&gt;this is a equation&lt;/h1&gt;
+&lt;p&gt;testing inline equations $a-3$ | wave equations $i\hbar \frac{\partial}{\partial t} \Psi = \hat{H}\Psi$, now math block:&lt;/p&gt;
+&lt;p&gt;$$
+i\hbar \frac{\partial}{\partial t} \Psi = \hat{H}\Psi
+$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;testing max lenght&lt;/strong&gt;: this is some randon words randon words randon words randon words randon words randon words randon wordsrandon wordsrandon wordsrandon words randon words
+this is a block equations&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Radio-over-Fiber System with Passive Carrier-to-Sideband Reduction</title>
+      <link>http://localhost:34019/kenyi-blog/docs/rof/rof/</link>
+      <pubDate>Tue, 26 Dec 2023 11:31:18 -0500</pubDate>
+      <guid>http://localhost:34019/kenyi-blog/docs/rof/rof/</guid>
+      <description>&lt;p&gt;&lt;span style=&#34;color:rgb(39, 109, 223);&#34;&gt;[TODO: add figures]&lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&#34;problem&#34;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;Design a system that implements a Radio-over-Fiber (RoF) link with 3 channels, employing single sideband modulation with an optical carrier. Use a passive filtering technique to reduce the Carrier-to-Sideband Ratio (CSR) in order to improve the link performance. The optical carrier frequencies must be separated by 0.4 nm (50 GHz), and the RF carriers must be within the range of 18 GHz to 28 GHz. The data transmission rate for each channel should be 2.5 Gb/s, using NRZ PAM-2 modulation format. The system corresponds to a 20 km fiber-optic link.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>How to measure the non-Markovianity of a Quantum System?</title>
-      <link>http://localhost:1313/docs/oqs/oqs/</link>
+      <link>http://localhost:34019/kenyi-blog/docs/oqs/oqs/</link>
       <pubDate>Wed, 26 Jul 2023 08:11:59 -0500</pubDate>
-      <guid>http://localhost:1313/docs/oqs/oqs/</guid>
+      <guid>http://localhost:34019/kenyi-blog/docs/oqs/oqs/</guid>
       <description>&lt;div style=&#34;text-align: center;&#34;&gt;
     Final term paper for the course of Open Quantum Systems.
 &lt;/div&gt;
@@ -59,9 +125,9 @@ The line is the Hamiltonian for the Kitaev chain, the second for the quantum dot
     </item>
     <item>
       <title>Bookshelf</title>
-      <link>http://localhost:1313/bookshelf/</link>
+      <link>http://localhost:34019/kenyi-blog/bookshelf/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/bookshelf/</guid>
+      <guid>http://localhost:34019/kenyi-blog/bookshelf/</guid>
       <description>A list of my published books.</description>
     </item>
   </channel>

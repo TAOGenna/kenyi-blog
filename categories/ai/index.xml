@@ -6,17 +6,15 @@
     <description>Recent content in AI on Kenyi&#39;Log</description>
     <generator>Hugo -- 0.147.9</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 Jun 2025 16:38:03 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 20 Oct 2025 12:20:23 -0500</lastBuildDate>
     <atom:link href="https://taogenna.github.io/kenyi-blog/categories/ai/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>High Signal P</title>
-      <link>https://taogenna.github.io/kenyi-blog/docs/high-signal-p/high-signal-p/</link>
-      <pubDate>Sat, 28 Jun 2025 16:38:03 -0500</pubDate>
-      <guid>https://taogenna.github.io/kenyi-blog/docs/high-signal-p/high-signal-p/</guid>
-      <description>&lt;h1 id=&#34;overview&#34;&gt;Overview&lt;/h1&gt;
-&lt;p&gt;Since I got interested in ML, and technology in general, I&amp;rsquo;ve gathered some kind of mental list of people&amp;rsquo;s blogs I should check from time to time. I call these &lt;em&gt;high signal people&lt;/em&gt;. But not only they share technical knowledge from ML or SWE, the blogs I enjoy the most are the ones that dig deep into whatever thing you consider normal.&lt;/p&gt;
-&lt;h2 id=&#34;what-this-post-is-about&#34;&gt;What this post is about&lt;/h2&gt;
-&lt;p&gt;Here I will just be listing all the &lt;em&gt;high signal people/blogs&lt;/em&gt; I found so far. This post in particular will serve as a repo so I don&amp;rsquo;t keep things locally.&lt;/p&gt;</description>
+      <title>PPCA: The Minimal Generative Model</title>
+      <link>https://taogenna.github.io/kenyi-blog/docs/ppca/ppca/</link>
+      <pubDate>Mon, 20 Oct 2025 12:20:23 -0500</pubDate>
+      <guid>https://taogenna.github.io/kenyi-blog/docs/ppca/ppca/</guid>
+      <description>&lt;h1 id=&#34;ppca-probabilistic-principal-component-analysis&#34;&gt;PPCA: Probabilistic Principal Component Analysis&lt;/h1&gt;
+&lt;p&gt;PCA is one of those algorithms you learn early and then treat as a black box: center the data, compute the top eigenvectors of the sample covariance, project. But PCA &lt;em&gt;feels&lt;/em&gt; algebraic — where does it come from probabilistically? Probabilistic PCA (PPCA) answers that question: it is the &lt;strong&gt;maximum-likelihood solution of a simple linear Gaussian latent-variable model&lt;/strong&gt;. Understanding PPCA is a tiny, high-value step on the path to modern generative models (VAEs, normalizing flows): it isolates the linear + Gaussian case where every calculation is analytic, so you can see clearly how inference and likelihood tie together.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

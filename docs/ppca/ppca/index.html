@@ -8,7 +8,7 @@
 <title>PPCA: The Minimal Generative Model | Kenyi&#39;Log</title>
 <meta name="keywords" content="">
 <meta name="description" content="PPCA: Probabilistic Principal Component Analysis
-PCA is one of those algorithms you learn early and then treat as a black box: center the data, compute the top eigenvectors of the sample covariance, project. But PCA feels algebraic — where does it come from probabilistically? Probabilistic PCA (PPCA) answers that question: it is the maximum-likelihood solution of a simple linear Gaussian latent-variable model. Understanding PPCA is a tiny, high-value step on the path to modern generative models (VAEs, normalizing flows): it isolates the linear &#43; Gaussian case where every calculation is analytic, so you can see clearly how inference and likelihood tie together.">
+PCA is one of those algorithms you learn early and then treat as a black box: center the data, compute the top eigenvectors of the sample covariance, project. But PCA feels algebraic, where does it come from probabilistically? Probabilistic PCA (PPCA) answers that question: it is the maximum-likelihood solution of a simple linear Gaussian latent-variable model. Understanding PPCA is a tiny, high-value step on the path to modern generative models (VAEs, normalizing flows): it isolates the linear &#43; Gaussian case where every calculation is analytic, so you can see clearly how inference and likelihood tie together.">
 <meta name="author" content="Kenyi Takagui-Perez">
 <link rel="canonical" href="https://taogenna.github.io/kenyi-blog/docs/ppca/ppca/">
 <link crossorigin="anonymous" href="/kenyi-blog/assets/css/stylesheet.97ce433988149984f534c928fc914072e36e0e399108c98380f083ba885d9de0.css" integrity="sha256-l85DOYgUmYT1NMko/JFAcuNuDjmRCMmDgPCDuohdneA=" rel="preload stylesheet" as="style">
@@ -82,7 +82,7 @@ PCA is one of those algorithms you learn early and then treat as a black box: ce
 <meta property="og:url" content="https://taogenna.github.io/kenyi-blog/docs/ppca/ppca/">
   <meta property="og:site_name" content="Kenyi&#39;Log">
   <meta property="og:title" content="PPCA: The Minimal Generative Model">
-  <meta property="og:description" content="PPCA: Probabilistic Principal Component Analysis PCA is one of those algorithms you learn early and then treat as a black box: center the data, compute the top eigenvectors of the sample covariance, project. But PCA feels algebraic — where does it come from probabilistically? Probabilistic PCA (PPCA) answers that question: it is the maximum-likelihood solution of a simple linear Gaussian latent-variable model. Understanding PPCA is a tiny, high-value step on the path to modern generative models (VAEs, normalizing flows): it isolates the linear &#43; Gaussian case where every calculation is analytic, so you can see clearly how inference and likelihood tie together.">
+  <meta property="og:description" content="PPCA: Probabilistic Principal Component Analysis PCA is one of those algorithms you learn early and then treat as a black box: center the data, compute the top eigenvectors of the sample covariance, project. But PCA feels algebraic, where does it come from probabilistically? Probabilistic PCA (PPCA) answers that question: it is the maximum-likelihood solution of a simple linear Gaussian latent-variable model. Understanding PPCA is a tiny, high-value step on the path to modern generative models (VAEs, normalizing flows): it isolates the linear &#43; Gaussian case where every calculation is analytic, so you can see clearly how inference and likelihood tie together.">
   <meta property="og:locale" content="en-us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="docs">
@@ -91,7 +91,7 @@ PCA is one of those algorithms you learn early and then treat as a black box: ce
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PPCA: The Minimal Generative Model">
 <meta name="twitter:description" content="PPCA: Probabilistic Principal Component Analysis
-PCA is one of those algorithms you learn early and then treat as a black box: center the data, compute the top eigenvectors of the sample covariance, project. But PCA feels algebraic — where does it come from probabilistically? Probabilistic PCA (PPCA) answers that question: it is the maximum-likelihood solution of a simple linear Gaussian latent-variable model. Understanding PPCA is a tiny, high-value step on the path to modern generative models (VAEs, normalizing flows): it isolates the linear &#43; Gaussian case where every calculation is analytic, so you can see clearly how inference and likelihood tie together.">
+PCA is one of those algorithms you learn early and then treat as a black box: center the data, compute the top eigenvectors of the sample covariance, project. But PCA feels algebraic, where does it come from probabilistically? Probabilistic PCA (PPCA) answers that question: it is the maximum-likelihood solution of a simple linear Gaussian latent-variable model. Understanding PPCA is a tiny, high-value step on the path to modern generative models (VAEs, normalizing flows): it isolates the linear &#43; Gaussian case where every calculation is analytic, so you can see clearly how inference and likelihood tie together.">
 
 
 <script type="application/ld+json">
@@ -120,12 +120,12 @@ PCA is one of those algorithms you learn early and then treat as a black box: ce
   "@type": "BlogPosting",
   "headline": "PPCA: The Minimal Generative Model",
   "name": "PPCA: The Minimal Generative Model",
-  "description": "PPCA: Probabilistic Principal Component Analysis PCA is one of those algorithms you learn early and then treat as a black box: center the data, compute the top eigenvectors of the sample covariance, project. But PCA feels algebraic — where does it come from probabilistically? Probabilistic PCA (PPCA) answers that question: it is the maximum-likelihood solution of a simple linear Gaussian latent-variable model. Understanding PPCA is a tiny, high-value step on the path to modern generative models (VAEs, normalizing flows): it isolates the linear + Gaussian case where every calculation is analytic, so you can see clearly how inference and likelihood tie together.\n",
+  "description": "PPCA: Probabilistic Principal Component Analysis PCA is one of those algorithms you learn early and then treat as a black box: center the data, compute the top eigenvectors of the sample covariance, project. But PCA feels algebraic, where does it come from probabilistically? Probabilistic PCA (PPCA) answers that question: it is the maximum-likelihood solution of a simple linear Gaussian latent-variable model. Understanding PPCA is a tiny, high-value step on the path to modern generative models (VAEs, normalizing flows): it isolates the linear + Gaussian case where every calculation is analytic, so you can see clearly how inference and likelihood tie together.\n",
   "keywords": [
     
   ],
-  "articleBody": "PPCA: Probabilistic Principal Component Analysis PCA is one of those algorithms you learn early and then treat as a black box: center the data, compute the top eigenvectors of the sample covariance, project. But PCA feels algebraic — where does it come from probabilistically? Probabilistic PCA (PPCA) answers that question: it is the maximum-likelihood solution of a simple linear Gaussian latent-variable model. Understanding PPCA is a tiny, high-value step on the path to modern generative models (VAEs, normalizing flows): it isolates the linear + Gaussian case where every calculation is analytic, so you can see clearly how inference and likelihood tie together.\nBelow I present a single self-contained story: model → marginal → posterior → likelihood → MLE solution → interpretation. I’ll highlight the key identities you need and keep the algebra explicit so nothing mysterious is swept under the rug.\nMotivation We want a generative model for $d$-dimensional observations $t$ that:\nIs simple enough to solve analytically; and Reduces to classical PCA in an appropriate limit. A latent-variable model does exactly this: introduce a low-dimensional latent $x\\in\\mathbb{R}^q$ ($q",
-  "wordCount" : "1775",
+  "articleBody": "PPCA: Probabilistic Principal Component Analysis PCA is one of those algorithms you learn early and then treat as a black box: center the data, compute the top eigenvectors of the sample covariance, project. But PCA feels algebraic, where does it come from probabilistically? Probabilistic PCA (PPCA) answers that question: it is the maximum-likelihood solution of a simple linear Gaussian latent-variable model. Understanding PPCA is a tiny, high-value step on the path to modern generative models (VAEs, normalizing flows): it isolates the linear + Gaussian case where every calculation is analytic, so you can see clearly how inference and likelihood tie together.\nBelow I present a single self-contained story: model → marginal → posterior → likelihood → MLE solution → interpretation. I’ll highlight the key identities you need and keep the algebra explicit so nothing mysterious is swept under the rug.\nMotivation We want a generative model for $d$-dimensional observations $t$ that:\nIs simple enough to solve analytically; and Reduces to classical PCA in an appropriate limit. A latent-variable model does exactly this: introduce a low-dimensional latent $x\\in\\mathbb{R}^q$ ($q",
+  "wordCount" : "1772",
   "inLanguage": "en",
   "datePublished": "2025-10-20T12:20:23-05:00",
   "dateModified": "2025-10-20T12:20:23-05:00",
@@ -225,7 +225,7 @@ PCA is one of those algorithms you learn early and then treat as a black box: ce
 </div>
   </header> 
   <div class="post-content"><h1 id="ppca-probabilistic-principal-component-analysis">PPCA: Probabilistic Principal Component Analysis<a hidden class="anchor" aria-hidden="true" href="#ppca-probabilistic-principal-component-analysis">#</a></h1>
-<p>PCA is one of those algorithms you learn early and then treat as a black box: center the data, compute the top eigenvectors of the sample covariance, project. But PCA <em>feels</em> algebraic — where does it come from probabilistically? Probabilistic PCA (PPCA) answers that question: it is the <strong>maximum-likelihood solution of a simple linear Gaussian latent-variable model</strong>. Understanding PPCA is a tiny, high-value step on the path to modern generative models (VAEs, normalizing flows): it isolates the linear + Gaussian case where every calculation is analytic, so you can see clearly how inference and likelihood tie together.</p>
+<p>PCA is one of those algorithms you learn early and then treat as a black box: center the data, compute the top eigenvectors of the sample covariance, project. But PCA <em>feels</em> algebraic, where does it come from probabilistically? Probabilistic PCA (PPCA) answers that question: it is the <strong>maximum-likelihood solution of a simple linear Gaussian latent-variable model</strong>. Understanding PPCA is a tiny, high-value step on the path to modern generative models (VAEs, normalizing flows): it isolates the linear + Gaussian case where every calculation is analytic, so you can see clearly how inference and likelihood tie together.</p>
 <p>Below I present a single self-contained story: model → marginal → posterior → likelihood → MLE solution → interpretation. I’ll highlight the key identities you need and keep the algebra explicit so nothing mysterious is swept under the rug.</p>
 <hr>
 <h1 id="motivation">Motivation<a hidden class="anchor" aria-hidden="true" href="#motivation">#</a></h1>
@@ -248,14 +248,21 @@ where $W$ is a $d\times q$ matrix (the linear mapping), $\mu\in\mathbb{R}^d$ is 
 <li>Because both prior and likelihood are Gaussian, the marginal $p(t)$ and posterior $p(x\mid t)$ are Gaussian and computable in closed form.</li>
 <li>The model has a rotational ambiguity in $W$: replacing $W$ by $W R$ for any orthogonal $R\in\mathbb{R}^{q\times q}$ leaves the model unchanged (with appropriate change of latent coordinates). So $W$ is identifiable only up to orthogonal transforms.</li>
 </ol>
-<p>For the sake of clarity I&rsquo;ll use the explanation of <a href="https://medium.com/practical-coding/the-simplest-generative-model-you-probably-missed-c840d68b704">Oliver</a>:
+<p>For the sake of clarity I&rsquo;ll use the explanation of <a href="https://medium.com/practical-coding/the-simplest-generative-model-you-probably-missed-c840d68b704">Oliver</a>:</p>
 <figure class="align-center">
-    <img loading="lazy" src="../ppca_prince.jpg"
+    <img loading="lazy" src="../../PPCA/ppca_prince.jpg"
          alt="Description of the image"/> <figcaption>
             <p>Bishop’s “Pattern Recognition and Machine Learning”, chapter 12.</p>
         </figcaption>
 </figure>
-</p>
+
+<!-- <figure class="align-center">
+    <img loading="lazy" src="../ppca_prince.png"
+         alt="Description of the image"/> <figcaption>
+            <p>Bishop’s “Pattern Recognition and Machine Learning”, chapter 12.</p>
+        </figcaption>
+</figure>
+ -->
 <ul>
 <li>Left panel: After sampling a variable from the latent distribution,</li>
 <li>Middle panel: The visibles are drawn from an isotropic Gaussian (diagonal covariance matrix) around $W * x_h + \mu$.</li>
@@ -390,7 +397,7 @@ Then M-step updates $W$ and $\sigma^2$ by solving linear equations involving the
 <ul>
 <li><strong>Classical PCA</strong>: algorithmic; finds subspace spanned by top eigenvectors of $S$. No generative likelihood (no noise model).</li>
 <li><strong>PPCA</strong>: linear generative model with <em>isotropic</em> Gaussian noise $\sigma^2 I_d$. Likelihood is available and PCA arises in the limit $\sigma^2\to 0$.</li>
-<li><strong>Factor analysis (FA)</strong>: same linear structure but with <em>diagonal</em> noise covariance $\Psi$ (not necessarily isotropic). FA is more flexible but algebraically messier — closed-form MLEs for $\Psi$ do not generally exist and EM is standard.</li>
+<li><strong>Factor analysis (FA)</strong>: same linear structure but with <em>diagonal</em> noise covariance $\Psi$ (not necessarily isotropic). FA is more flexible but algebraically messier, closed-form MLEs for $\Psi$ do not generally exist and EM is standard.</li>
 </ul>
 <hr>
 <h1 id="sampling--use-as-a-generative-model">Sampling &amp; use as a generative model<a hidden class="anchor" aria-hidden="true" href="#sampling--use-as-a-generative-model">#</a></h1>
@@ -403,7 +410,7 @@ Then M-step updates $W$ and $\sigma^2$ by solving linear equations involving the
 <p>This generates samples from $\mathcal{N}(\mu, W W^\top + \sigma^2 I_d)$. So PPCA is <em>not</em> a complex high-capacity generative model, but it provides a clear probabilistic story for projection + reconstruction and clarifies the role of latent dimensions and noise.</p>
 <h1 id="code-and-visuals">Code and visuals<a hidden class="anchor" aria-hidden="true" href="#code-and-visuals">#</a></h1>
 <figure class="align-center">
-    <img loading="lazy" src="../ppca_output.jpg"
+    <img loading="lazy" src="../../PPCA/ppca_output.png"
          alt="Description of the image"/> <figcaption>
             <p>We start from the observed data (in blue) and through the PPCA max log likelihood we find the optimized parameters, which once plugged in the linear relation and sample some values from the latent space we effectively generate a new dataset (in red) with similar distribution as the observed dataset.</p>
         </figcaption>
@@ -472,7 +479,7 @@ Then M-step updates $W$ and $\sigma^2$ by solving linear equations involving the
 <h1 id="intuition--how-to-read-the-equations">Intuition &amp; how to read the equations<a hidden class="anchor" aria-hidden="true" href="#intuition--how-to-read-the-equations">#</a></h1>
 <ul>
 <li>$W W^\top$ captures the <strong>structured, low-rank variability</strong> in the data (the principal subspace).</li>
-<li>$\sigma^2 I_d$ captures <strong>isotropic residual noise</strong> — variance not explained by the subspace.</li>
+<li>$\sigma^2 I_d$ captures <strong>isotropic residual noise</strong>, variance not explained by the subspace.</li>
 <li>The posterior $p(x\mid t)$ tells you how to infer latent coordinates of a datum: as noise decreases ($\sigma^2\to0$) the posterior collapses to a point and the mean becomes the usual linear projection onto principal components.</li>
 <li>The MLE for $\sigma^2$ being the mean of the discarded eigenvalues gives a neat decomposition: total variance = explained (top $q$ eigenvalues) + unexplained (average of remaining eigenvalues).</li>
 </ul>

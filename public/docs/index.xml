@@ -6,15 +6,15 @@
     <description>Recent content in Docs on Kenyi&#39;Log</description>
     <generator>Hugo -- 0.147.9</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 Jun 2025 16:38:03 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 20 Oct 2025 12:20:23 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/docs/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>High Signal P</title>
-      <link>http://localhost:1313/docs/high-signal-p/high-signal-p/</link>
-      <pubDate>Sat, 28 Jun 2025 16:38:03 -0500</pubDate>
-      <guid>http://localhost:1313/docs/high-signal-p/high-signal-p/</guid>
-      <description>&lt;h1 id=&#34;overview&#34;&gt;Overview&lt;/h1&gt;
-&lt;p&gt;Since I got interested in ML, and technology in general, I&amp;rsquo;ve gathered some kind of mental list of people&amp;rsquo;s blogs I should check from time to time. I call these &lt;em&gt;high signal people&lt;/em&gt;. But not only they share technical knowledge from ML or SWE, the blogs I enjoy the most are the ones that dig deep into whatever thing you consider normal. Take for example the article from Julian Schrittwieser on &lt;em&gt;HDR photography&lt;/em&gt;. Is it related to his past work on Google Deepmind? No, he&amp;rsquo;s just playing and enjoying the tech we have right now. For someone like me who has just started his journey into tech these blogs are fascinating and I thank them very much for being this open and sharing cool stuff.&lt;/p&gt;</description>
+      <title>PPCA: The Minimal Generative Model</title>
+      <link>http://localhost:1313/docs/ppca/ppca/</link>
+      <pubDate>Mon, 20 Oct 2025 12:20:23 -0500</pubDate>
+      <guid>http://localhost:1313/docs/ppca/ppca/</guid>
+      <description>&lt;h1 id=&#34;ppca-probabilistic-principal-component-analysis&#34;&gt;PPCA: Probabilistic Principal Component Analysis&lt;/h1&gt;
+&lt;p&gt;PCA is one of those algorithms you learn early and then treat as a black box: center the data, compute the top eigenvectors of the sample covariance, project. But PCA &lt;em&gt;feels&lt;/em&gt; algebraic — where does it come from probabilistically? Probabilistic PCA (PPCA) answers that question: it is the &lt;strong&gt;maximum-likelihood solution of a simple linear Gaussian latent-variable model&lt;/strong&gt;. Understanding PPCA is a tiny, high-value step on the path to modern generative models (VAEs, normalizing flows): it isolates the linear + Gaussian case where every calculation is analytic, so you can see clearly how inference and likelihood tie together.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Advancements in Representing Atomic Environments for Machine Learning Interatomic Potentials</title>
@@ -45,6 +45,26 @@ H &amp;= \sum_{j=1}^{N-1} \left( -t c_{j+1}^\dagger c_j + \Delta c_{j+1}^\dagger
 $$
 
 The line is the Hamiltonian for the Kitaev chain, the second for the quantum dot and its hopping with the first site of the nanowire, and the third one accounts for the Coulomb repulsion between the quantum dot and the first site.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Test</title>
+      <link>http://localhost:1313/docs/post1/post1/</link>
+      <pubDate>Sat, 16 Nov 2024 07:54:35 -0500</pubDate>
+      <guid>http://localhost:1313/docs/post1/post1/</guid>
+      <description>&lt;h1 id=&#34;some-code&#34;&gt;some code&lt;/h1&gt;
+&lt;h2 id=&#34;inline-code&#34;&gt;inline code&lt;/h2&gt;
+&lt;p&gt;Here is some &lt;code&gt;inline code&lt;/code&gt; that you can use in a paragraph.&lt;/p&gt;
+&lt;p&gt;some other inline &lt;code&gt;&amp;lt; figure src=&amp;quot;../image1.jpg&amp;quot; alt=&amp;quot;Description of the image&amp;quot; caption=&amp;quot;Your caption text here&amp;quot; class=&amp;quot;align-center&amp;quot; &amp;gt;&lt;/code&gt; code.&lt;/p&gt;
+&lt;h2 id=&#34;bloc-code&#34;&gt;bloc code&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;something&lt;/span&gt;():
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; tmr
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;this-is-a-equation&#34;&gt;this is a equation&lt;/h1&gt;
+&lt;p&gt;testing inline equations $a-3$ | wave equations $i\hbar \frac{\partial}{\partial t} \Psi = \hat{H}\Psi$, now math block:&lt;/p&gt;
+&lt;p&gt;$$
+i\hbar \frac{\partial}{\partial t} \Psi = \hat{H}\Psi
+$$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;testing max lenght&lt;/strong&gt;: this is some randon words randon words randon words randon words randon words randon words randon wordsrandon wordsrandon wordsrandon words randon words
+this is a block equations&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to measure the non-Markovianity of a Quantum System?</title>

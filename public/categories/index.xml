@@ -6,12 +6,12 @@
     <description>Recent content in Categories on Kenyi&#39;Log</description>
     <generator>Hugo -- 0.147.9</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 Jun 2025 16:38:03 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 20 Oct 2025 12:20:23 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI</title>
       <link>http://localhost:1313/categories/ai/</link>
-      <pubDate>Sat, 28 Jun 2025 16:38:03 -0500</pubDate>
+      <pubDate>Mon, 20 Oct 2025 12:20:23 -0500</pubDate>
       <guid>http://localhost:1313/categories/ai/</guid>
       <description></description>
     </item>
@@ -27,6 +27,20 @@
       <link>http://localhost:1313/categories/math/</link>
       <pubDate>Tue, 28 Jan 2025 12:14:29 -0500</pubDate>
       <guid>http://localhost:1313/categories/math/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Art</title>
+      <link>http://localhost:1313/categories/art/</link>
+      <pubDate>Sat, 16 Nov 2024 07:54:35 -0500</pubDate>
+      <guid>http://localhost:1313/categories/art/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Programming</title>
+      <link>http://localhost:1313/categories/programming/</link>
+      <pubDate>Sat, 16 Nov 2024 07:54:35 -0500</pubDate>
+      <guid>http://localhost:1313/categories/programming/</guid>
       <description></description>
     </item>
   </channel>

@@ -79,7 +79,16 @@ PCA is one of those algorithms you learn early and then treat as a black box: ce
         });
     });
 </script>
-<meta property="og:url" content="https://taogenna.github.io/kenyi-blog/docs/ppca-gen/ppca-gen/">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VB0FSFKM9M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-VB0FSFKM9M');
+</script><meta property="og:url" content="https://taogenna.github.io/kenyi-blog/docs/ppca-gen/ppca-gen/">
   <meta property="og:site_name" content="Kenyi&#39;Log">
   <meta property="og:title" content="PPCA: The Minimal Generative Model">
   <meta property="og:description" content="PPCA: Probabilistic Principal Component Analysis PCA is one of those algorithms you learn early and then treat as a black box: center the data, compute the top eigenvectors of the sample covariance, project. But PCA feels algebraic, where does it come from probabilistically? Probabilistic PCA (PPCA) answers that question: it is the maximum-likelihood solution of a simple linear Gaussian latent-variable model. Understanding PPCA is a tiny, high-value step on the path to modern generative models (VAEs, normalizing flows): it isolates the linear &#43; Gaussian case where every calculation is analytic, so you can see clearly how inference and likelihood tie together.">

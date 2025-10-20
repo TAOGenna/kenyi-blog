@@ -7,7 +7,7 @@ categories = ["AI"]
 
 # PPCA: Probabilistic Principal Component Analysis  
 
-PCA is one of those algorithms you learn early and then treat as a black box: center the data, compute the top eigenvectors of the sample covariance, project. But PCA _feels_ algebraic — where does it come from probabilistically? Probabilistic PCA (PPCA) answers that question: it is the **maximum-likelihood solution of a simple linear Gaussian latent-variable model**. Understanding PPCA is a tiny, high-value step on the path to modern generative models (VAEs, normalizing flows): it isolates the linear + Gaussian case where every calculation is analytic, so you can see clearly how inference and likelihood tie together.
+PCA is one of those algorithms you learn early and then treat as a black box: center the data, compute the top eigenvectors of the sample covariance, project. But PCA _feels_ algebraic, where does it come from probabilistically? Probabilistic PCA (PPCA) answers that question: it is the **maximum-likelihood solution of a simple linear Gaussian latent-variable model**. Understanding PPCA is a tiny, high-value step on the path to modern generative models (VAEs, normalizing flows): it isolates the linear + Gaussian case where every calculation is analytic, so you can see clearly how inference and likelihood tie together.
 
 Below I present a single self-contained story: model → marginal → posterior → likelihood → MLE solution → interpretation. I’ll highlight the key identities you need and keep the algebra explicit so nothing mysterious is swept under the rug.
 
@@ -196,7 +196,7 @@ Then M-step updates $W$ and $\sigma^2$ by solving linear equations involving the
 
 - **Classical PCA**: algorithmic; finds subspace spanned by top eigenvectors of $S$. No generative likelihood (no noise model).  
 - **PPCA**: linear generative model with *isotropic* Gaussian noise $\sigma^2 I_d$. Likelihood is available and PCA arises in the limit $\sigma^2\to 0$.  
-- **Factor analysis (FA)**: same linear structure but with *diagonal* noise covariance $\Psi$ (not necessarily isotropic). FA is more flexible but algebraically messier — closed-form MLEs for $\Psi$ do not generally exist and EM is standard.
+- **Factor analysis (FA)**: same linear structure but with *diagonal* noise covariance $\Psi$ (not necessarily isotropic). FA is more flexible but algebraically messier, closed-form MLEs for $\Psi$ do not generally exist and EM is standard.
 
 ---
 
@@ -282,7 +282,7 @@ plt.show()
 # Intuition & how to read the equations
 
 - $W W^\top$ captures the **structured, low-rank variability** in the data (the principal subspace).  
-- $\sigma^2 I_d$ captures **isotropic residual noise** — variance not explained by the subspace.  
+- $\sigma^2 I_d$ captures **isotropic residual noise**, variance not explained by the subspace.  
 - The posterior $p(x\mid t)$ tells you how to infer latent coordinates of a datum: as noise decreases ($\sigma^2\to0$) the posterior collapses to a point and the mean becomes the usual linear projection onto principal components.  
 - The MLE for $\sigma^2$ being the mean of the discarded eigenvalues gives a neat decomposition: total variance = explained (top $q$ eigenvalues) + unexplained (average of remaining eigenvalues).
 

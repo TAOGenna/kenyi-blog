@@ -11,6 +11,9 @@ baseURL: "https://taogenna.github.io/kenyi-blog/"
 ```
 hugo new docs/<name of the post>/<name of the post>.md
 ```
+where `<name of the post>` should be full of lower case letters, symbols are ok.
+
+> why? if you include upper cases the paths for the images get screwed and are not going to get rendered correctly.
 ## How to build your site
 
 ```

@@ -1,9 +1,9 @@
 +++
 title = 'PPCA: The Minimal Generative Model'
-date = 2025-10-20T12:20:23-05:00
-draft = true
-categories = ["AI"]
+date = 2025-10-20T16:30:20-05:00
+draft = false
 +++
+
 
 # PPCA: Probabilistic Principal Component Analysis  
 
@@ -40,7 +40,7 @@ Two immediate facts:
 
 For the sake of clarity I'll use the explanation of [Oliver](https://medium.com/practical-coding/the-simplest-generative-model-you-probably-missed-c840d68b704):
 
-{{< figure src="../../PPCA/ppca_prince.jpg" alt="Description of the image" caption="Bishop’s “Pattern Recognition and Machine Learning”, chapter 12." class="align-center" >}}
+{{< figure src="../ppca_prince.jpg" alt="Description of the image" caption="Bishop’s “Pattern Recognition and Machine Learning”, chapter 12." class="align-center" >}}
 <!-- {{< figure src="../ppca_prince.png" alt="Description of the image" caption="Bishop’s “Pattern Recognition and Machine Learning”, chapter 12." class="align-center" >}} -->
 - Left panel: After sampling a variable from the latent distribution,
 - Middle panel: The visibles are drawn from an isotropic Gaussian (diagonal covariance matrix) around $W * x_h + \mu$.
@@ -214,7 +214,7 @@ This generates samples from $\mathcal{N}(\mu, W W^\top + \sigma^2 I_d)$. So PPCA
 
 # Code and visuals
 
-{{< figure src="../../PPCA/ppca_output.png" alt="Description of the image" caption="We start from the observed data (in blue) and through the PPCA max log likelihood we find the optimized parameters, which once plugged in the linear relation and sample some values from the latent space we effectively generate a new dataset (in red) with similar distribution as the observed dataset." class="align-center"  >}}
+{{< figure src="../ppca_output.png" alt="Description of the image" caption="We start from the observed data (in blue) and through the PPCA max log likelihood we find the optimized parameters, which once plugged in the linear relation and sample some values from the latent space we effectively generate a new dataset (in red) with similar distribution as the observed dataset." class="align-center"  >}}
 
 ```python
 import numpy as np

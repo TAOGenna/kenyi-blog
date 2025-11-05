@@ -8,6 +8,9 @@ params:
   math: true
 
   author: Kenyi Takagui-Perez
+  
+  # Google Analytics
+  googleAnalytics: "G-VB0FSFKM9M"
   homeInfoParams:
     Title: "Welcome to Kenyi'Log"
     Content: >

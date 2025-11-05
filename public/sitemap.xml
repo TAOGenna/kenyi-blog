@@ -29,32 +29,15 @@
     <loc>http://localhost:1313/categories/math/</loc>
     <lastmod>2025-01-28T12:14:29-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/art/</loc>
-    <lastmod>2024-11-16T07:54:35-05:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/github-actions/</loc>
-    <lastmod>2024-11-16T07:54:35-05:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/github-pages/</loc>
-    <lastmod>2024-11-16T07:54:35-05:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/hugo/</loc>
-    <lastmod>2024-11-16T07:54:35-05:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/programming/</loc>
-    <lastmod>2024-11-16T07:54:35-05:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2024-11-16T07:54:35-05:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/docs/post1/post1/</loc>
-    <lastmod>2024-11-16T07:54:35-05:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/docs/oqs/oqs/</loc>
     <lastmod>2023-07-26T08:11:59-05:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/archives/</loc>
   </url><url>
     <loc>http://localhost:1313/bookshelf/</loc>
+  </url><url>
+    <loc>http://localhost:1313/misc/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
   </url>
 </urlset>

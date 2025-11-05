@@ -42,6 +42,10 @@ menu:
       name: Bookshelf
       url: /bookshelf/
       weight: 40
+    - identifier: misc
+      name: Misc.
+      url: /misc/
+      weight: 50
 
 markup:
   goldmark:

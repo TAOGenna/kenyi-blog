@@ -47,26 +47,6 @@ $$
 The line is the Hamiltonian for the Kitaev chain, the second for the quantum dot and its hopping with the first site of the nanowire, and the third one accounts for the Coulomb repulsion between the quantum dot and the first site.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Test</title>
-      <link>http://localhost:1313/docs/post1/post1/</link>
-      <pubDate>Sat, 16 Nov 2024 07:54:35 -0500</pubDate>
-      <guid>http://localhost:1313/docs/post1/post1/</guid>
-      <description>&lt;h1 id=&#34;some-code&#34;&gt;some code&lt;/h1&gt;
-&lt;h2 id=&#34;inline-code&#34;&gt;inline code&lt;/h2&gt;
-&lt;p&gt;Here is some &lt;code&gt;inline code&lt;/code&gt; that you can use in a paragraph.&lt;/p&gt;
-&lt;p&gt;some other inline &lt;code&gt;&amp;lt; figure src=&amp;quot;../image1.jpg&amp;quot; alt=&amp;quot;Description of the image&amp;quot; caption=&amp;quot;Your caption text here&amp;quot; class=&amp;quot;align-center&amp;quot; &amp;gt;&lt;/code&gt; code.&lt;/p&gt;
-&lt;h2 id=&#34;bloc-code&#34;&gt;bloc code&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;something&lt;/span&gt;():
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; tmr
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;this-is-a-equation&#34;&gt;this is a equation&lt;/h1&gt;
-&lt;p&gt;testing inline equations $a-3$ | wave equations $i\hbar \frac{\partial}{\partial t} \Psi = \hat{H}\Psi$, now math block:&lt;/p&gt;
-&lt;p&gt;$$
-i\hbar \frac{\partial}{\partial t} \Psi = \hat{H}\Psi
-$$&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;testing max lenght&lt;/strong&gt;: this is some randon words randon words randon words randon words randon words randon words randon wordsrandon wordsrandon wordsrandon words randon words
-this is a block equations&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>How to measure the non-Markovianity of a Quantum System?</title>
       <link>http://localhost:1313/docs/oqs/oqs/</link>
       <pubDate>Wed, 26 Jul 2023 08:11:59 -0500</pubDate>

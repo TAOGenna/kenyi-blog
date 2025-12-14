@@ -6,6 +6,7 @@ summary: "A list of my published books."
 ---
 
 ## 2025
+**The Idea Factory: Learning to Think at MIT**, Pepper White<p>
 **Stories of Your Life and Others**, Ted Chiang<p>
 **Deep Work**, Cal Newport<p>
 **A Theory of Fun for Game Design**, Raph Koster<p>
